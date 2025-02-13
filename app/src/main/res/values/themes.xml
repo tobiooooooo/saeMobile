@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SAEPeridodeC_GregoireKuhn_AliShanKassouMamode_TheoRobert_LucasRevault_EthanDuquenne" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.SAEPeridodeC_GregoireKuhn_AliShanKassouMamode_TheoRobert_LucasRevault_EthanDuquenne" parent="Base.Theme.SAEPeridodeC_GregoireKuhn_AliShanKassouMamode_TheoRobert_LucasRevault_EthanDuquenne" />
+</resources>
