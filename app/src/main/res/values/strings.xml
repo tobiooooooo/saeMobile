@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">SAE</string>
-    <string name="mot_de_passe_oublie"><u>mot de passe oublié ?</u></string>
-
+    <string name="forgot_password"><u>forgot password ?</u></string>
+    <string name="log_you_in">log you in</string>
+    <string name="e_mail">e-mail</string>
+    <string name="password">password</string>
+    <string name="log_in">log in</string>
 </resources>

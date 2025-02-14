@@ -1,0 +1,7 @@
+<resources>
+    <string name="forgot_password"><u>mot de passe oublié ?</u></string>
+    <string name="log_you_in">connectez-vous</string>
+    <string name="e_mail">email</string>
+    <string name="password">mot de passe</string>
+    <string name="log_in">se connecter</string>
+</resources>
