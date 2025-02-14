@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SAE</string>
+    <string name="app_name" translatable="false">France Assos Santé</string>
     <string name="forgot_password"><u>forgot password ?</u></string>
     <string name="log_you_in">log you in</string>
     <string name="e_mail">e-mail</string>
