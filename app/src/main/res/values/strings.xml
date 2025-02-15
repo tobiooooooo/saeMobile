@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">France Assos Santé</string>
-    <string name="forgot_password"><u>forgot password ?</u></string>
+
     <string name="log_you_in">log you in</string>
     <string name="e_mail">e-mail</string>
-    <string name="password">password</string>
-    <string name="log_in">log in</string>
     <string name="enter_e_mail">enter your e-mail</string>
+    <string name="password">password</string>
     <string name="enter_password">enter your password</string>
+    <string name="log_in">log in</string>
+    <string name="forgot_password"><u>forgot password ?</u></string>
 </resources>
