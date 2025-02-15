@@ -42,7 +42,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/se_connecter"
+            android:id="@+id/log_in_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Button" />

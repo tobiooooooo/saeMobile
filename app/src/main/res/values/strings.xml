@@ -5,4 +5,6 @@
     <string name="e_mail">e-mail</string>
     <string name="password">password</string>
     <string name="log_in">log in</string>
+    <string name="enter_e_mail">enter your e-mail</string>
+    <string name="enter_password">enter your password</string>
 </resources>

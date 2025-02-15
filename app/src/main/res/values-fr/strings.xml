@@ -4,4 +4,6 @@
     <string name="e_mail">email</string>
     <string name="password">mot de passe</string>
     <string name="log_in">se connecter</string>
+    <string name="enter_e_mail">entrez votre email</string>
+    <string name="enter_password">entrez votre mot de passe</string>
 </resources>
