@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name" translatable="false">France Assos Santé</string>
 
+    <string name="main_sentence">a simple gesture for a strong impact</string>
+    <string name="make_donation">make a donation to an association of your choice</string>
+    <string name="make_donation_btn">make a donation</string>
+    <string name="discover_association">discover all the associations</string>
+    <string name="discover_association_btn">discover</string>
+
+
     <string name="log_you_in">log you in</string>
     <string name="e_mail">e-mail</string>
     <string name="enter_e_mail">enter your e-mail</string>
