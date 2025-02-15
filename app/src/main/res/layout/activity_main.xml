@@ -69,6 +69,7 @@
                 android:textAlignment="center"/>
 
             <Button
+                android:id="@+id/make_donation_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -90,10 +91,11 @@
                 android:textAlignment="center"/>
 
             <Button
+                android:id="@+id/discover_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="@string/discover_association_btn"/>
+                android:text="@string/discover_btn"/>
     </LinearLayout>
 
         <Space

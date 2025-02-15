@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.example.sae.Login;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +24,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button log_in_btn = (Button) findViewById(R.id.log_in_btn);
+        Button makeDonationBtn = (Button) findViewById(R.id.make_donation_btn);
+        Button discoverBtn = (Button) findViewById(R.id.discover_btn);
+        Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        log_in_btn.setOnClickListener(new View.OnClickListener() {
+        makeDonationBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DonationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        discoverBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DiscoverActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Login.class);

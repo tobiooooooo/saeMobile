@@ -3,7 +3,7 @@
     <string name="make_donation">faire un don à une association de votre choix</string>
     <string name="make_donation_btn">faire un don</string>
     <string name="discover_association">découvrir toutes les associations</string>
-    <string name="discover_association_btn">découvrir</string>
+    <string name="discover_btn">découvrir</string>
 
     <string name="forgot_password"><u>mot de passe oublié ?</u></string>
     <string name="log_you_in">connectez-vous</string>
