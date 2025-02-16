@@ -116,7 +116,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scannez votre association !"
+            android:text="@string/scan_association"
             android:textAlignment="center"/>
 
         <Button
@@ -124,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="QR code"/>
+            android:text="@string/qr_code"/>
 
     </LinearLayout>
 

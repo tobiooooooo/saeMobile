@@ -1,15 +1,17 @@
 <resources>
-    <string name="main_sentence">un geste simple pour un impact fort</string>
-    <string name="make_donation">faire un don à une association de votre choix</string>
-    <string name="make_donation_btn">faire un don</string>
-    <string name="discover_association">découvrir toutes les associations</string>
-    <string name="discover_btn">découvrir</string>
+    <string name="main_sentence">Un geste simple pour un impact fort</string>
+    <string name="make_donation">Faire un don à une association de votre choix</string>
+    <string name="make_donation_btn">Faire un don</string>
+    <string name="discover_association">Découvrir toutes les associations</string>
+    <string name="discover_btn">Découvrir</string>
 
-    <string name="forgot_password"><u>mot de passe oublié ?</u></string>
-    <string name="log_you_in">connectez-vous</string>
-    <string name="e_mail">email</string>
-    <string name="password">mot de passe</string>
-    <string name="log_in">se connecter</string>
-    <string name="enter_e_mail">entrez votre email</string>
-    <string name="enter_password">entrez votre mot de passe</string>
+    <string name="forgot_your_password"><u>Mot de passe oublié ?</u></string>
+    <string name="sign_in">Connectez-vous</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="log_in">Se connecter</string>
+    <string name="enter_e_mail">Entrez votre email</string>
+    <string name="enter_password">Entrez votre mot de passe</string>
+    <string name="scan_association">Scannez le code de votre association</string>
+    <string name="qr_code">Code QR</string>
 </resources>

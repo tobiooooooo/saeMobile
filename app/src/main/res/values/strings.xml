@@ -1,18 +1,20 @@
 <resources>
     <string name="app_name" translatable="false">France Assos Santé</string>
 
-    <string name="main_sentence">a simple gesture for a strong impact</string>
-    <string name="make_donation">make a donation to an association of your choice</string>
-    <string name="make_donation_btn">make a donation</string>
-    <string name="discover_association">discover all the associations</string>
-    <string name="discover_btn">discover</string>
+    <string name="main_sentence">A simple gesture for a strong impact</string>
+    <string name="make_donation">Make a donation to an association of your choice</string>
+    <string name="make_donation_btn">Donate</string>
+    <string name="discover_association">Discover all the associations</string>
+    <string name="discover_btn">Discover</string>
 
 
-    <string name="log_you_in">log you in</string>
-    <string name="e_mail">e-mail</string>
-    <string name="enter_e_mail">enter your e-mail</string>
-    <string name="password">password</string>
-    <string name="enter_password">enter your password</string>
-    <string name="log_in">log in</string>
-    <string name="forgot_password"><u>forgot password ?</u></string>
+    <string name="sign_in">Sign in</string>
+    <string name="e_mail">E-mail</string>
+    <string name="enter_e_mail">Enter your e-mail</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_your_password"><u>Forgot your password?</u></string>
+    <string name="scan_association">Scan your association\'s code</string>
+    <string name="qr_code">QR Code</string>
 </resources>
