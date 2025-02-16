@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button makeDonationBtn = (Button) findViewById(R.id.make_donation_btn);
         Button discoverBtn = (Button) findViewById(R.id.discover_btn);
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
+        Button scanQRButton = findViewById(R.id.btn_qr_code);
 
         makeDonationBtn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -51,5 +52,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        scanQRButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ScanQRActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

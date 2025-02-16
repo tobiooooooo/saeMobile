@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ScanQRActivity">
 
     <!-- ✅ Header -->
     <LinearLayout
@@ -62,73 +62,43 @@
             android:layout_height="5px"
             android:background="@color/black"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="14sp"
-            android:text="@string/main_sentence"
-            android:textAlignment="center" />
-
+        <!-- ✅ Section Nom association -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="35dp"
-            android:padding="20dp"
+            android:padding="18dp"
             android:background="@drawable/bg_login">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/make_donation"
-                android:textAlignment="center"/>
-
-            <Button
-                android:id="@+id/make_donation_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/make_donation_btn"/>
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="35dp"
-        android:padding="30dp"
-        android:background="@drawable/bg_login">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/discover_association"
-                android:textAlignment="center"/>
-
-            <Button
-                android:id="@+id/discover_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/discover_btn"/>
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scannez votre association !"
+            android:text="CADUS – Conseil Aide et Défense des Usagers de la Santé"
             android:textAlignment="center"/>
 
-        <Button
-            android:id="@+id/btn_qr_code"
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/cadus"/>
+        </LinearLayout>
+        <!-- ✅ Section QR Code -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="QR code"/>
+            android:orientation="vertical"
+            android:layout_margin="35dp"
+            android:padding="55dp"
+            android:background="@drawable/bg_login">
 
-    </LinearLayout>
 
-
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@drawable/qrcode"/>
+        </LinearLayout>
         <!-- ✅ Footer -->
         <Space
             android:layout_width="wrap_content"
@@ -144,7 +114,7 @@
 
 
             <Button
-                android:id="@+id/log_in_btn"
+                android:id="@+id/log_in_btnn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/log_in"
