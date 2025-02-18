@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Button discoverBtn = (Button) findViewById(R.id.discover_btn);
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
         Button scanQRButton = findViewById(R.id.btn_qr_code);
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
         ImageButton menuButton = findViewById(R.id.menu_button);
 
