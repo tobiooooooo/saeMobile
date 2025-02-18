@@ -6,3 +6,4 @@ Ce projet a pour objectif de développer une application mobile dans le cadre de
 
 ### 📅 État d'Avancement
 c'est vachement le début là
+.
