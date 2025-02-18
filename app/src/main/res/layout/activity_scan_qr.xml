@@ -98,6 +98,19 @@
                 android:layout_height="130dp"
                 android:layout_gravity="center"
                 android:src="@drawable/qrcode"/>
+
+            <Button
+                android:id="@+id/scan_qr_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scanner_qr_code"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"/>
+
+
         </LinearLayout>
         <!-- ✅ Footer -->
         <Space
@@ -133,6 +146,7 @@
                 android:src="@drawable/ic_setting"
                 android:contentDescription="Paramètres"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
+
         </LinearLayout>
     </LinearLayout>
 
