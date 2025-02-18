@@ -17,4 +17,5 @@
     <string name="forgot_your_password"><u>Forgot your password?</u></string>
     <string name="scan_association">Scan your association\'s code</string>
     <string name="qr_code">QR Code</string>
+    <string name="scanner_qr_code" translatable="false">QR Code</string>
 </resources>
