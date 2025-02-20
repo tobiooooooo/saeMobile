@@ -99,9 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/log_in"
-                android:layout_marginTop="30dp"
-                android:textColor="@color/black"
-                android:background="@drawable/bg_login_se_connecter"/>
+                android:layout_marginTop="30dp"/>
 
             <TextView
                 android:id="@+id/textView3"
