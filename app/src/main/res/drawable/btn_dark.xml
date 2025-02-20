@@ -5,11 +5,9 @@
     <!-- Couleur de fond (optionnel) -->
     <solid android:color="#00FFFFFF"/>
 
-    <!-- Définition de la bordure -->
     <stroke
         android:width="1.5dp"
-        android:color="@color/black"/> <!-- Rouge -->
+        android:color="@color/white"/>
 
-    <!-- Coins arrondis (optionnel) -->
     <corners android:radius="10dp"/>
 </shape>
