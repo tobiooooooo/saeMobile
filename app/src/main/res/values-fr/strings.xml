@@ -2,6 +2,7 @@
     <string name="main_sentence">Un geste simple pour un impact fort</string>
     <string name="make_donation">Faire un don à une association de votre choix</string>
     <string name="make_donation_btn">Faire un don</string>
+    <string name="Coord">Mes coordonnees</string>
     <string name="discover_association">Découvrir toutes les associations</string>
     <string name="discover_btn">Découvrir</string>
 
@@ -14,4 +15,9 @@
     <string name="enter_password">Entrez votre mot de passe</string>
     <string name="scan_association">Scannez le code de votre association</string>
     <string name="qr_code">Code QR</string>
+    <string name="mon_don">Mon don</string>
+    <string name="choix_association">Choix de l\association</string>
+    <string name="montant_du_don">Montant du don</string>
+    <string name="don_r_current">Don recurrent.</string>
+    <string name="Next">next\n</string>
 </resources>

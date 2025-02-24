@@ -3,6 +3,7 @@
 
     <string name="main_sentence">A simple gesture for a strong impact</string>
     <string name="make_donation">Make a donation to an association of your choice</string>
+    <string name="Coord">My contact details</string>
     <string name="make_donation_btn">Donate</string>
     <string name="discover_association">Discover all the associations</string>
     <string name="discover_btn">Discover</string>
@@ -18,4 +19,9 @@
     <string name="scan_association">Scan your association\'s code</string>
     <string name="qr_code">QR Code</string>
     <string name="scanner_qr_code" translatable="false">QR Code</string>
+    <string name="mon_don">My donation</string>
+    <string name="choix_association">Choice of association</string>
+    <string name="montant_du_don">Donation amount</string>
+    <string name="don_r_current">Recurring donation. </string>
+    <string name="Next">next\n</string>
 </resources>

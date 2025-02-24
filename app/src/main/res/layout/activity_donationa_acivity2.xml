@@ -10,19 +10,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonationActivity">
+    tools:context=".DonationActivity2">
 
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DonationActivity">
+        tools:context=".DonationActivity2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".DonationActivity">
+            tools:context=".DonationActivity2">
 
 
             <LinearLayout
@@ -176,7 +176,7 @@
                         android:text="@string/don_r_current" />
 
                     <Button
-                        android:id="@+id/btn_next"
+                        android:id="@+id/btn_qr_code"
                         android:layout_width="match_parent"
                         android:layout_height="38dp"
                         android:layout_margin="1dp"
