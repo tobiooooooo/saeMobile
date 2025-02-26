@@ -1,0 +1,462 @@
+[
+    {
+        "nom": "A.M.I nationale",
+        "description": "Association nationale de défense des malades, invalides et handicapés",
+        "image": "a.m.i-200x136.png"
+    },
+    {
+        "nom": "AAAVAM",
+        "description": "Association nationale de défense des intérêts des Victimes d’accidents des médicaments",
+        "image": "aaavam_logo.png"
+    },
+    {
+        "nom": "Actions Traitements",
+        "description": "Association de patients, agréée pour représenter les usagers du système de santé",
+        "image": "actions_traitements_logo.png"
+    },
+    {
+        "nom": "Addictions Alcool Vie Libre,",
+        "description": "Description non disponible",
+        "image": "addictions_alcool_vie_libre,_logo.png"
+    },
+    {
+        "nom": "ADEPA",
+        "description": "Association d’Etudes et de Défense des Personnes Amputées",
+        "image": "adepa_logo.png"
+    },
+    {
+        "nom": "ADMD",
+        "description": "Association pour le droit de mourir dans la dignité",
+        "image": "admd_logo.png"
+    },
+    {
+        "nom": "Advocacy France",
+        "description": "Association d’usagers en santé mentale, médico-sociale et sociale",
+        "image": "advocacy_france_logo.png"
+    },
+    {
+        "nom": "AFA Crohn RCH France",
+        "description": "Association François Aupetit, maladies inflammatoires chroniques intestinales,",
+        "image": "afa_crohn_rch_france_logo.png"
+    },
+    {
+        "nom": "AFDE",
+        "description": "Association française Des Dysplasies Ectodermiques",
+        "image": "afde_logo.png"
+    },
+    {
+        "nom": "AFDOC",
+        "description": "Association française des malades et opérés cardio-vasculaires",
+        "image": "afdoc_logo.png"
+    },
+    {
+        "nom": "AFGS",
+        "description": "Association Française du Gougerot Sjögren et des syndromes secs",
+        "image": "afgs_logo.png"
+    },
+    {
+        "nom": "AFH",
+        "description": "Association française des Hémophiles",
+        "image": "afh_logo.png"
+    },
+    {
+        "nom": "AFM-Téléthon",
+        "description": "Association française contre les myopathies",
+        "image": "afm_téléthon_logo.png"
+    },
+    {
+        "nom": "AFPric",
+        "description": "Association française des polyarthritiques et des rhumatismes inflammatoires chroniques",
+        "image": "afpric_logo.png"
+    },
+    {
+        "nom": "AFRH",
+        "description": "Association française pour la Recherche sur l’Hidronadénite",
+        "image": "afrh_logo.png"
+    },
+    {
+        "nom": "AFS",
+        "description": "Association France Spondyloarthrites",
+        "image": "afs_logo.png"
+    },
+    {
+        "nom": "AFSA",
+        "description": "Association française du Syndrome d’Angelman",
+        "image": "afsa_logo.png"
+    },
+    {
+        "nom": "AFSEP",
+        "description": "Association française des Sclérosés en Plaques",
+        "image": "afsep_logo.png"
+    },
+    {
+        "nom": "AFVD",
+        "description": "Association francophone pour vaincre les douleurs",
+        "image": "afvd_logo.png"
+    },
+    {
+        "nom": "AFVS",
+        "description": "Association des familles victimes du saturnisme",
+        "image": "afvs_logo.png"
+    },
+    {
+        "nom": "AIDES",
+        "description": "Association de lutte contre le sida",
+        "image": "aides_logo.png"
+    },
+    {
+        "nom": "AINP",
+        "description": "Association d’Information sur la Névralgie Pudendale",
+        "image": "ainp_logo.png"
+    },
+    {
+        "nom": "Alcool Ecoute Joie & Santé,",
+        "description": "Description non disponible",
+        "image": "alcool_ecoute_joie_&_santé,_logo.png"
+    },
+    {
+        "nom": "Alliance Maladies Rares,",
+        "description": "Description non disponible",
+        "image": "alliance_maladies_rares,_logo.png"
+    },
+    {
+        "nom": "AMADYS",
+        "description": "Association des malades atteints de dystonie",
+        "image": "amadys_logo.png"
+    },
+    {
+        "nom": "AMALYSTE",
+        "description": "Association des victimes des syndromes de Lyell et de Stevens-Johnson",
+        "image": "amalyste_logo.png"
+    },
+    {
+        "nom": "ANDAR",
+        "description": "Association Nationale de Défense contre l'Arthrite Rhumatoïde",
+        "image": "andar_logo.png"
+    },
+    {
+        "nom": "APAHJ",
+        "description": "Association Pour Adultes et Jeunes Handicapés",
+        "image": "apahj_logo.png"
+    },
+    {
+        "nom": "APF France handicap,",
+        "description": "Description non disponible",
+        "image": "apf_france_handicap,_logo.png"
+    },
+    {
+        "nom": "APODEC",
+        "description": "Association Porteurs de défibrillateurs cardiaques",
+        "image": "apodec_logo.png"
+    },
+    {
+        "nom": "ARGOS 2001",
+        "description": "Aide aux personnes atteintes de troubles bipolaires et à leur entourage",
+        "image": "argos_2001_logo.png"
+    },
+    {
+        "nom": "ARSLA",
+        "description": "Association pour la recherche sur la sclérose latérale amyotrophique",
+        "image": "arsla_logo.png"
+    },
+    {
+        "nom": "ASBH",
+        "description": "Association nationale Spina Bifida et Handicaps Associés",
+        "image": "asbh_logo.png"
+    },
+    {
+        "nom": "ASF",
+        "description": "Association des Sclérodermiques de France",
+        "image": "asf_logo.png"
+    },
+    {
+        "nom": "ASFC",
+        "description": "Association Française du Syndrome de Fatigue Chronique",
+        "image": "asfc_logo.png"
+    },
+    {
+        "nom": "Association des Brûlés de France,",
+        "description": "Description non disponible",
+        "image": "association_des_brûlés_de_france,_logo.png"
+    },
+    {
+        "nom": "Autisme France,",
+        "description": "Description non disponible",
+        "image": "autisme_france,_logo.png"
+    },
+    {
+        "nom": "AVIAM",
+        "description": "Association d’aide aux victimes d’accidents médicaux",
+        "image": "aviam_logo.png"
+    },
+    {
+        "nom": "CADUS",
+        "description": "Conseil Aide et Défense des Usagers de la Santé",
+        "image": "cadus_logo.png"
+    },
+    {
+        "nom": "CLCV",
+        "description": "Consommation, logement, cadre de vie",
+        "image": "clcv_logo.png"
+    },
+    {
+        "nom": "CNAFAL",
+        "description": "Conseil National des Association Familiales Laïques",
+        "image": "cnafal_logo.png"
+    },
+    {
+        "nom": "CNAFC",
+        "description": "Confédération Nationale des Associations Familiales Catholiques",
+        "image": "cnafc_logo.png"
+    },
+    {
+        "nom": "CNAO",
+        "description": "Collectif National des Associations d'Obèses",
+        "image": "cnao_logo.png"
+    },
+    {
+        "nom": "E3M",
+        "description": "Association d’Entraide aux Malades de Myofasciite à Macrophages",
+        "image": "e3m_logo.png"
+    },
+    {
+        "nom": "EFAPPE Epilepsies",
+        "description": "Fédération des Associations en faveur des Personnes handicapées par des Épilepsies sévères",
+        "image": "efappe_epilepsies_logo.png"
+    },
+    {
+        "nom": "EndoFrance,",
+        "description": "Association Française de lutte contre l’endométriose",
+        "image": "endofrance,_logo.png"
+    },
+    {
+        "nom": "ENDOmind,",
+        "description": "Association d'actions contre l'endométriose",
+        "image": "endomind,_logo.png"
+    },
+    {
+        "nom": "Entraid’Addict",
+        "description": "Fédération Alcool Assistance",
+        "image": "entraid’addict_logo.png"
+    },
+    {
+        "nom": "Familles de France,",
+        "description": "Association de consommateurs et association d’usagers du système de santé",
+        "image": "familles-rurales-200x136.png"
+    },
+    {
+        "nom": "Familles Rurales,",
+        "description": "Association de défense des consommateurs",
+        "image": "familles-rurales-200x136.png"
+    },
+    {
+        "nom": "FFCM",
+        "description": "Fédération française des Curistes médicalisés",
+        "image": "ffcm-200x136.png"
+    },
+    {
+        "nom": "FFDSB",
+        "description": "Fédération Français pour le Don de Sang Bénévole",
+        "image": "ffdsb-200x136.png"
+    },
+    {
+        "nom": "FFSA",
+        "description": "Fédération Française Sésame Autisme",
+        "image": "default_image.png"
+    },
+    {
+        "nom": "FGCP",
+        "description": "Fédération Française des Associations de Greffés du Coeur et des Poumons",
+        "image": "default_image.png"
+    },
+    {
+        "nom": "Fibromyalgie SOS,",
+        "description": "Description non disponible",
+        "image": "fibromyalgie-sos-200x136.png"
+    },
+    {
+        "nom": "FNAPSY",
+        "description": "Fédération nationale des patients en psychiatrie",
+        "image": "fnapsy-200x136.png"
+    },
+    {
+        "nom": "FNAR",
+        "description": "Fédération nationale des associations de retraités et préretraités",
+        "image": "fnar-200x136.png"
+    },
+    {
+        "nom": "FNATH",
+        "description": "Association des accidentés de la vie",
+        "image": "fnath-200x136.png"
+    },
+    {
+        "nom": "France Alzheimer,",
+        "description": "Description non disponible",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "France Dépression,",
+        "description": "Description non disponible",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "France Lyme,",
+        "description": "Description non disponible",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "France Parkinson,",
+        "description": "Description non disponible",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "France Rein,",
+        "description": "Description non disponible",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "Fédération française des Diabétiques,",
+        "description": "Description non disponible",
+        "image": "federation-francaise-des-diabetiques-200x136.png"
+    },
+    {
+        "nom": "Fédération nationale des Amis de la santé",
+        "description": "Association de prévention et de lutte contre les addictions et plus spécifiquement l’alcoolisme",
+        "image": "federation-francaise-des-diabetiques-200x136.png"
+    },
+    {
+        "nom": "Hypersupers TDAH France,",
+        "description": "Association française pour aider les familles, adultes et enfants concernés par le Trouble Déficit de l’Attention / Hyperactivité",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "JALMALV",
+        "description": "Jusqu’à la mort accompagner la vie",
+        "image": "default_image.png"
+    },
+    {
+        "nom": "La Croix bleue",
+        "description": "Association d’aide aux personnes en difficulté avec l’alcool",
+        "image": "croix-bleue-200x136.png"
+    },
+    {
+        "nom": "La CSF",
+        "description": "La Confédération syndicale des familles",
+        "image": "default_image.png"
+    },
+    {
+        "nom": "La Ligue contre le cancer,",
+        "description": "Description non disponible",
+        "image": "ligue-contre-le-cancer-200x136.png"
+    },
+    {
+        "nom": "Le LIEN",
+        "description": "Association de lutte, d’information et d’étude des infections nosocomiales",
+        "image": "default_image.png"
+    },
+    {
+        "nom": "Le Planning Familial,",
+        "description": "Description non disponible",
+        "image": "planning-familial-200x136.png"
+    },
+    {
+        "nom": "Les petits frères des pauvres,",
+        "description": "Association en aide et soutien aux personnes âgées isolées",
+        "image": "petits-freres-des-pauvres-200x136.png"
+    },
+    {
+        "nom": "Maladie de Crohn et recto-colite hémorragique),",
+        "description": "Description non disponible",
+        "image": "maladie_de_crohn_et_recto_colite_hémorragique),_logo.png"
+    },
+    {
+        "nom": "Marfans,",
+        "description": "Association française des syndromes de Marfan et apparentés",
+        "image": "marfans-200x136.png"
+    },
+    {
+        "nom": "PRIARTEM",
+        "description": "Pour rassembler informer et agir sur les risques liés aux technologies électromagnétiques",
+        "image": "priartem-200x136.png"
+    },
+    {
+        "nom": "Renaloo",
+        "description": "Insuffisance rénale, dialyse, greffe du rein",
+        "image": "renaloo-200x136.png"
+    },
+    {
+        "nom": "Réseau D.E.S. France,",
+        "description": "Association regroupant des personnes concernées par le Distilbène",
+        "image": "france-lyme-200x136.png"
+    },
+    {
+        "nom": "Réseau Environnement Santé,",
+        "description": "Description non disponible",
+        "image": "res-200x136.png"
+    },
+    {
+        "nom": "Schizo-Oui,",
+        "description": "Description non disponible",
+        "image": "schizo-oui-200x136.png"
+    },
+    {
+        "nom": "SOS Hépatites",
+        "description": "Hépatites et maladies du foie",
+        "image": "sos-hepatites-200x136.png"
+    },
+    {
+        "nom": "Transhépate",
+        "description": "Fédération des malades et greffés du foie",
+        "image": "transhepate-1-200x136.png"
+    },
+    {
+        "nom": "UAFLMV",
+        "description": "Union des associations françaises de laryngectomisés et mutilés de la voix",
+        "image": "afl-200x136.png"
+    },
+    {
+        "nom": "UFAL",
+        "description": "Union des Familles Laïques",
+        "image": "ufal-200x136.png"
+    },
+    {
+        "nom": "UFC-Que Choisir,",
+        "description": "Union fédérale des consommateurs",
+        "image": "ufc-que-choisir-200x136.png"
+    },
+    {
+        "nom": "UNAF",
+        "description": "Union nationale des associations familiales",
+        "image": "unaf-200x136.png"
+    },
+    {
+        "nom": "UNAFAM",
+        "description": "Union nationale des familles et amis de personnes malades et/ou handicapées psychiques",
+        "image": "unaf-200x136.png"
+    },
+    {
+        "nom": "UNAFTC",
+        "description": "Union nationale des associations de familles de traumatisés crâniens et cérébro-lésés), UNAPECLE",
+        "image": "unaf-200x136.png"
+    },
+    {
+        "nom": "Vaincre la Mucoviscidose,",
+        "description": "Description non disponible",
+        "image": "vaincre-la-muco-200x136.png"
+    },
+    {
+        "nom": "Vivre comme avant",
+        "description": "mouvement de soutien et d’aide morale aux personnes atteintes du cancer du sein",
+        "image": "vivre-comme-avant-200x136.png"
+    },
+    {
+        "nom": "VMEH",
+        "description": "Visite aux malades en établissements hospitaliers).",
+        "image": "vmeh-200x136.png"
+    },
+    {
+        "nom": "Épilepsie-France,",
+        "description": "Description non disponible",
+        "image": "epilepsie-france-200x136.png"
+    }
+]
