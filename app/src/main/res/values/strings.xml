@@ -24,4 +24,6 @@
     <string name="montant_du_don">Donation amount</string>
     <string name="don_r_current">Recurring donation. </string>
     <string name="Next">next\n</string>
+
+    <string name="association_logo" translatable="false">Logo de l\'association</string>
 </resources>
