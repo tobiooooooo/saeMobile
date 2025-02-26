@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         discoverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DiscoverActivity.class);
+                Intent intent = new Intent(MainActivity.this, selection_assos_activity.class);
                 startActivity(intent);
             }
         });
