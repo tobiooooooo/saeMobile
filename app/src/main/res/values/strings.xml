@@ -26,4 +26,6 @@
     <string name="Next">next\n</string>
 
     <string name="association_logo" translatable="false">Logo de l\'association</string>
+    <string name="mon_recapitulatif">Mon recapitulatif</string>
+    <string name="mes_informations_bancaires">Mes informations bancaires</string>
 </resources>

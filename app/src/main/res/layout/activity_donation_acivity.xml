@@ -17,6 +17,7 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         tools:context=".DonationActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +37,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="75dp"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -83,6 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="5px"
                     android:background="@color/black"/>
+
 
                 <LinearLayout
                     android:layout_width="346dp"
@@ -185,12 +187,12 @@
 
                 </LinearLayout>
 
+
+                <!-- ✅ Footer -->
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
-
-                <!-- ✅ Footer -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
