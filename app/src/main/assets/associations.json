@@ -262,12 +262,12 @@
     {
         "nom": "FFSA",
         "description": "Fédération Française Sésame Autisme",
-        "image": "default_image.png"
+        "image": "sesame-autisme-200x136.png"
     },
     {
         "nom": "FGCP",
         "description": "Fédération Française des Associations de Greffés du Coeur et des Poumons",
-        "image": "default_image.png"
+        "image": "france-coeur-poumon-200x136.png"
     },
     {
         "nom": "Fibromyalgie SOS,",
@@ -332,7 +332,7 @@
     {
         "nom": "JALMALV",
         "description": "Jusqu’à la mort accompagner la vie",
-        "image": "default_image.png"
+        "image": "jamalv-200x136.png"
     },
     {
         "nom": "La Croix bleue",
@@ -342,7 +342,7 @@
     {
         "nom": "La CSF",
         "description": "La Confédération syndicale des familles",
-        "image": "default_image.png"
+        "image": "maladie_de_crohn_et_recto_colite_hémorragique),_logo.png"
     },
     {
         "nom": "La Ligue contre le cancer,",
@@ -352,7 +352,7 @@
     {
         "nom": "Le LIEN",
         "description": "Association de lutte, d’information et d’étude des infections nosocomiales",
-        "image": "default_image.png"
+        "image": "association_des_brûlés_de_france,_logo.png"
     },
     {
         "nom": "Le Planning Familial,",
