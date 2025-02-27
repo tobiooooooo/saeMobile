@@ -46,4 +46,7 @@ dependencies {
     implementation 'androidx.activity:activity:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation libs.zxing.android.embedded
+
+    //pour lire les JSON
+    implementation 'com.google.code.gson:gson:2.10.1'
 }

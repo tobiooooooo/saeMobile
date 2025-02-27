@@ -111,12 +111,12 @@
     },
     {
         "nom": "Alcool Ecoute Joie & Santé,",
-        "description": "Description non disponible",
+        "description": "Groupe d'aide contre l'alcoolisme",
         "image": "alcool_ecoute_joie_&_santé,_logo.png"
     },
     {
         "nom": "Alliance Maladies Rares,",
-        "description": "Description non disponible",
+        "description": "Lutte contre les maladies rares",
         "image": "alliance_maladies_rares,_logo.png"
     },
     {
@@ -141,7 +141,7 @@
     },
     {
         "nom": "APF France handicap,",
-        "description": "Description non disponible",
+        "description": "Aide aux handicapés",
         "image": "apf_france_handicap,_logo.png"
     },
     {
@@ -176,12 +176,12 @@
     },
     {
         "nom": "Association des Brûlés de France,",
-        "description": "Description non disponible",
+        "description": "Accompagnement des personnes brulées",
         "image": "association_des_brûlés_de_france,_logo.png"
     },
     {
         "nom": "Autisme France,",
-        "description": "Description non disponible",
+        "description": "Aide aux personnes autistes",
         "image": "autisme_france,_logo.png"
     },
     {
@@ -221,7 +221,7 @@
     },
     {
         "nom": "EFAPPE Epilepsies",
-        "description": "Fédération des Associations en faveur des Personnes handicapées par des Épilepsies sévères",
+        "description": "Fédération des Associations en faveur des Personnes handicapées par des Épilepsies",
         "image": "efappe_epilepsies_logo.png"
     },
     {
@@ -242,7 +242,7 @@
     {
         "nom": "Familles de France,",
         "description": "Association de consommateurs et association d’usagers du système de santé",
-        "image": "familles-rurales-200x136.png"
+        "image": "familles-de-france-200x136.png"
     },
     {
         "nom": "Familles Rurales,",
@@ -271,7 +271,7 @@
     },
     {
         "nom": "Fibromyalgie SOS,",
-        "description": "Description non disponible",
+        "description": "Lutte contre la Fibromyalgie",
         "image": "fibromyalgie-sos-200x136.png"
     },
     {
@@ -291,42 +291,42 @@
     },
     {
         "nom": "France Alzheimer,",
-        "description": "Description non disponible",
-        "image": "france-lyme-200x136.png"
+        "description": "Lutte contre Alzheimer",
+        "image": "france-alzheimer-200x136.png"
     },
     {
         "nom": "France Dépression,",
-        "description": "Description non disponible",
-        "image": "france-lyme-200x136.png"
+        "description": "Lutte contre la dépression",
+        "image": "france-depression-2-200x136.png"
     },
     {
         "nom": "France Lyme,",
-        "description": "Description non disponible",
+        "description": "lutte contre la maladie de Lyme",
         "image": "france-lyme-200x136.png"
     },
     {
         "nom": "France Parkinson,",
-        "description": "Description non disponible",
-        "image": "france-lyme-200x136.png"
+        "description": "Lutte contre la maladie de Parkinson",
+        "image": "afa_crohn_rch_france_logo.png"
     },
     {
         "nom": "France Rein,",
-        "description": "Description non disponible",
-        "image": "france-lyme-200x136.png"
+        "description": "Association de donation de rein",
+        "image": "franceRein.png"
     },
     {
         "nom": "Fédération française des Diabétiques,",
-        "description": "Description non disponible",
+        "description": "Lutte contre le diabète",
         "image": "federation-francaise-des-diabetiques-200x136.png"
     },
     {
-        "nom": "Fédération nationale des Amis de la santé",
-        "description": "Association de prévention et de lutte contre les addictions et plus spécifiquement l’alcoolisme",
-        "image": "federation-francaise-des-diabetiques-200x136.png"
+        "nom": "FNAS",
+        "description": "Lutte contre les addictions et plus spécifiquement l’alcoolisme",
+        "image": "FNAS-200x136.png"
     },
     {
         "nom": "Hypersupers TDAH France,",
-        "description": "Association française pour aider les familles, adultes et enfants concernés par le Trouble Déficit de l’Attention / Hyperactivité",
+        "description": "aide pour adultes et enfants concernés par le Trouble Déficit de l’Attention / Hyperactivité",
         "image": "france-lyme-200x136.png"
     },
     {
@@ -346,7 +346,7 @@
     },
     {
         "nom": "La Ligue contre le cancer,",
-        "description": "Description non disponible",
+        "description": "Lutte contre le cancer",
         "image": "ligue-contre-le-cancer-200x136.png"
     },
     {
@@ -356,7 +356,7 @@
     },
     {
         "nom": "Le Planning Familial,",
-        "description": "Description non disponible",
+        "description": "Aide et conseil aux familles",
         "image": "planning-familial-200x136.png"
     },
     {
@@ -366,7 +366,7 @@
     },
     {
         "nom": "Maladie de Crohn et recto-colite hémorragique),",
-        "description": "Description non disponible",
+        "description": "Lutte contre la maladie de Crohn",
         "image": "maladie_de_crohn_et_recto_colite_hémorragique),_logo.png"
     },
     {
@@ -376,7 +376,7 @@
     },
     {
         "nom": "PRIARTEM",
-        "description": "Pour rassembler informer et agir sur les risques liés aux technologies électromagnétiques",
+        "description": "Pour rassembler informer et agir sur les risques liés aux technologies",
         "image": "priartem-200x136.png"
     },
     {
@@ -391,12 +391,12 @@
     },
     {
         "nom": "Réseau Environnement Santé,",
-        "description": "Description non disponible",
+        "description": "Régulation des marchandises sensibles niveau santé",
         "image": "res-200x136.png"
     },
     {
         "nom": "Schizo-Oui,",
-        "description": "Description non disponible",
+        "description": "Aide aux personnes schizophrènes",
         "image": "schizo-oui-200x136.png"
     },
     {
@@ -432,16 +432,16 @@
     {
         "nom": "UNAFAM",
         "description": "Union nationale des familles et amis de personnes malades et/ou handicapées psychiques",
-        "image": "unaf-200x136.png"
+        "image": "unafam-200x136.png"
     },
     {
         "nom": "UNAFTC",
-        "description": "Union nationale des associations de familles de traumatisés crâniens et cérébro-lésés), UNAPECLE",
-        "image": "unaf-200x136.png"
+        "description": "Union nationale des associations de familles de traumatisés crâniens et cérébro-lésés",
+        "image": "unaftc-200x136.png"
     },
     {
         "nom": "Vaincre la Mucoviscidose,",
-        "description": "Description non disponible",
+        "description": "Lutte contre la Mucoviscidose",
         "image": "vaincre-la-muco-200x136.png"
     },
     {
@@ -456,7 +456,7 @@
     },
     {
         "nom": "Épilepsie-France,",
-        "description": "Description non disponible",
+        "description": "Aide aux épileptiques",
         "image": "epilepsie-france-200x136.png"
     }
 ]

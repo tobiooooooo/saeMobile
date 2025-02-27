@@ -1,6 +1,8 @@
 package com.example.sae;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.ViewHolder>
@@ -34,9 +39,15 @@ public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.
         holder.tvNom.setText(association.getNom());
         holder.tvDescription.setText(association.getDescription());
 
-        // Charger l'image depuis drawable
-        int imageRes = context.getResources().getIdentifier(association.getImage(), "drawable", context.getPackageName());
-        holder.imageView.setImageResource(imageRes);
+        // Charger l'image depuis le fichier des logos dans assets
+        try {
+            InputStream is = context.getAssets().open("logos/" + association.getImage());
+            Bitmap bitmap = BitmapFactory.decodeStream(is);
+            holder.imageView.setImageBitmap(bitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+            holder.imageView.setImageResource(R.drawable.default_image); // Image par défaut si manquante
+        }
     }
 
 

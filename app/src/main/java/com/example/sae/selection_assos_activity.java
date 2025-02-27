@@ -10,6 +10,12 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,17 +40,33 @@ public class selection_assos_activity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-        //données en "dur" créés tant qu'on a pas le JSON pour test
-        associations = new ArrayList<>();
-        associations.add(new Association("CADUS", "Conseil Aide & Défense des Usagers de la Santé", "cadus_logo"));
-        associations.add(new Association("UAFLMV", "Union des associations françaises de laryngectomisés et mutilés de la voix", "uaflmv_logo"));
-        associations.add(new Association("A.M.I", "Association nationale de défense des malades, invalides et handicapés", "ami_logo"));
-        associations.add(new Association("Endo France", "Association de lutte contre l’endométriose", "endofrance_logo"));
-        associations.add(new Association("UFC-Que Choisir", "UFC-Que Choisir", "ufc_quechoisir_logo"));
+        associations = loadAssociationsFromJson();
 
         // 🔹 Associer l'Adapter avec le RecyclerView
         adapter = new AssociationAdapter(associations,this);
         recyclerView.setAdapter(adapter);
+    }
+
+    private List<Association> loadAssociationsFromJson()
+    {
+        try {
+            //on ouvre le JSON
+            InputStream is = getAssets().open("associations.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            String json = new String(buffer,"UTF-8");
+
+            Gson gson = new Gson();
+            Type listType = new TypeToken<List<Association>>(){}.getType();
+            return gson.fromJson(json, listType);
+
+        }catch (IOException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
