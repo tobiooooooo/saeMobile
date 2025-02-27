@@ -13,16 +13,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.ViewHolder>
 {
     private List<Association> associations;
+    private List<Association> associationsFull; // Liste complète pour la recherche
     private Context context;
 
 
     public AssociationAdapter(List<Association> associations, Context context) {
         this.associations = associations;
+        this.associationsFull = new ArrayList<>(associations); // Copie complète pour la recherche
         this.context = context;
     }
 
@@ -50,11 +53,26 @@ public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.
         }
     }
 
-
     @Override
     public int getItemCount() {
         return associations.size();
     }
+
+    public void filter(String text) {
+        associations.clear();
+        if (text.isEmpty()) {
+            associations.addAll(associationsFull); // Si la barre est vide, tout afficher
+        } else {
+            String searchText = text.toLowerCase();
+            for (Association item : associationsFull) {
+                if (item.getNom().toLowerCase().contains(searchText)) {
+                    associations.add(item); // Ajouter seulement ceux qui contiennent le texte
+                }
+            }
+        }
+        notifyDataSetChanged(); // Mettre à jour l'affichage
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView tvNom, tvDescription;

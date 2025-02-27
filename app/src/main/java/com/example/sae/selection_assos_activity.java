@@ -1,6 +1,7 @@
 package com.example.sae;
 
 import android.os.Bundle;
+import android.widget.SearchView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,7 +46,24 @@ public class selection_assos_activity extends AppCompatActivity {
         // 🔹 Associer l'Adapter avec le RecyclerView
         adapter = new AssociationAdapter(associations,this);
         recyclerView.setAdapter(adapter);
+
+        androidx.appcompat.widget.SearchView searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false; // Pas besoin de gérer la soumission du texte
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.filter(newText); // Appelle la méthode de filtrage
+                return true;
+            }
+        });
+
     }
+
+
 
     private List<Association> loadAssociationsFromJson()
     {
