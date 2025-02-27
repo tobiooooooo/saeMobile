@@ -29,10 +29,9 @@
             android:name=".StatsDons"
             android:exported="false" />
         <activity
-            android:name=".DiscoverActivity"
-            android:exported="false" />
-        <activity
             android:name=".DonationActivity"
+            android:exported="false" />
+        <activity android:name=".DonationActivity2"
             android:exported="false" />
         <activity
             android:name=".Login"

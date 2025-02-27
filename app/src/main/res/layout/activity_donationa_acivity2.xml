@@ -36,7 +36,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="75dp"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -84,6 +84,7 @@
                     android:layout_height="5px"
                     android:background="@color/black"/>
 
+
                 <LinearLayout
                     android:layout_width="346dp"
                     android:layout_height="197dp"
@@ -95,102 +96,110 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/Coord"
+                        android:text="@string/mon_recapitulatif"
                         android:textAlignment="center"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
 
-                    <EditText
-                        android:id="@+id/input_nom"
+                    <!-- Destinataire -->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:hint="Nom"
-                        android:inputType="textPersonName" />
+                        android:textSize="18sp"
+                        android:text="Destinataire :"
+                        android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/input_prenom"
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <!-- Montant du don -->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:hint="Prénom"
-                        android:inputType="textPersonName" />
+                        android:textSize="18sp"
+                        android:text="Montant :"
+                        android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/input_email"
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <!-- Type de don -->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:hint="Adresse e-mail"
-                        android:inputType="textEmailAddress" />
+                        android:textSize="18sp"
+                        android:text="Type de don :"
+                        android:textStyle="bold" />
+
+
+
 
                 </LinearLayout>
 
 
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:text="@string/mon_don"
-                    android:textAlignment="center"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-
                 <LinearLayout
                     android:layout_width="344dp"
-                    android:layout_height="223dp"
+                    android:layout_height="227dp"
                     android:layout_margin="35dp"
                     android:background="@drawable/bg_login"
                     android:orientation="vertical"
                     android:padding="25dp">
 
-                    <!-- Titre du formulaire -->
-
-
-                    <!-- Choix de l'association -->
-                    <Spinner
-                        android:id="@+id/association_spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginBottom="1dp"
-                        android:prompt="@string/choix_association" />
-
-                    <!-- Montant du don -->
+                    <!-- Nom sur la carte -->
                     <EditText
-                        android:id="@+id/input_montant_don"
+                        android:id="@+id/et_nom_carte"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
-                        android:hint="@string/montant_du_don"
-                        android:inputType="numberDecimal" />
+                        android:hint="Nom sur la carte"
+                        android:inputType="textCapWords"
+                        android:padding="10dp" />
 
-                    <!-- Don récurrent -->
-                    <CheckBox
-                        android:id="@+id/checkbox_don_recurrent"
-                        android:layout_width="187dp"
-                        android:layout_height="21dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/don_r_current" />
-
-                    <Button
-                        android:id="@+id/btn_qr_code"
+                    <!-- Numéro de carte -->
+                    <EditText
+                        android:id="@+id/et_numero_carte"
                         android:layout_width="match_parent"
-                        android:layout_height="38dp"
-                        android:layout_margin="1dp"
-                        android:text="@string/Next" />
+                        android:layout_height="wrap_content"
+                        android:hint="Numéro de carte"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        android:padding="10dp" />
+
+                    <!-- Date d'expiration -->
+                    <EditText
+                        android:id="@+id/et_date_expiration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Date d'expiration"
+                        android:inputType="date"
+                        android:maxLength="5"
+                        android:padding="10dp" />
+
+                    <!-- Cryptogramme -->
+                    <EditText
+                        android:id="@+id/et_cryptogramme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cryptogramme à 3 chiffres"
+                        android:inputType="numberPassword"
+                        android:maxLength="3"
+                        android:padding="10dp" />
 
 
                 </LinearLayout>
 
+
+                <!-- ✅ Footer -->
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
-
-                <!-- ✅ Footer -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
