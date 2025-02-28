@@ -107,10 +107,11 @@
 
                     <!-- Destinataire -->
                     <TextView
+                        android:id="@+id/tv_association_recap"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Association : "
                         android:textSize="18sp"
-                        android:text="Destinataire :"
                         android:textStyle="bold" />
 
                     <Space
@@ -119,12 +120,12 @@
                         android:layout_weight="1"/>
                     <!-- Montant du don -->
                     <TextView
+                        android:id="@+id/tv_montant"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Montant : "
                         android:textSize="18sp"
-                        android:text="Montant :"
                         android:textStyle="bold" />
-
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
@@ -157,7 +158,7 @@
                         android:id="@+id/et_nom_carte"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nom sur la carte"
+                        android:hint="@string/nom_sur_la_carte"
                         android:inputType="textCapWords"
                         android:padding="10dp" />
 
@@ -166,30 +167,29 @@
                         android:id="@+id/et_numero_carte"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Numéro de carte"
+                        android:hint="@string/num_ro_de_carte"
                         android:inputType="number"
                         android:maxLength="16"
                         android:padding="10dp" />
 
-                    <!-- Date d'expiration -->
-                    <EditText
-                        android:id="@+id/et_date_expiration"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Date d'expiration"
-                        android:inputType="date"
-                        android:maxLength="5"
-                        android:padding="10dp" />
 
                     <!-- Cryptogramme -->
                     <EditText
                         android:id="@+id/et_cryptogramme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Cryptogramme à 3 chiffres"
+                        android:hint="@string/cryptogramme_3_chiffres"
                         android:inputType="numberPassword"
                         android:maxLength="3"
                         android:padding="10dp" />
+
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/valider"
+                        android:layout_marginTop="8dp"/>
 
 
                 </LinearLayout>

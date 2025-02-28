@@ -1,7 +1,7 @@
 package com.example.sae;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.SearchView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,17 +10,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
-public class selection_assos_activity extends AppCompatActivity {
+public class selection_assos_activity extends AppCompatActivity implements OnAssociationClickListener {
 
     private RecyclerView recyclerView;
     private AssociationAdapter adapter;
@@ -38,53 +35,35 @@ public class selection_assos_activity extends AppCompatActivity {
         });
 
         recyclerView = findViewById(R.id.recyclerView);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         associations = loadAssociationsFromJson();
-
-        // 🔹 Associer l'Adapter avec le RecyclerView
-        adapter = new AssociationAdapter(associations,this);
+        adapter = new AssociationAdapter(associations, this, this);
         recyclerView.setAdapter(adapter);
-
-        androidx.appcompat.widget.SearchView searchView = findViewById(R.id.searchView);
-        searchView.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false; // Pas besoin de gérer la soumission du texte
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                adapter.filter(newText); // Appelle la méthode de filtrage
-                return true;
-            }
-        });
-
     }
 
-
-
-    private List<Association> loadAssociationsFromJson()
-    {
+    private List<Association> loadAssociationsFromJson() {
         try {
-            //on ouvre le JSON
             InputStream is = getAssets().open("associations.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-
-            String json = new String(buffer,"UTF-8");
+            String json = new String(buffer, "UTF-8");
 
             Gson gson = new Gson();
-            Type listType = new TypeToken<List<Association>>(){}.getType();
+            Type listType = new TypeToken<List<Association>>() {}.getType();
             return gson.fromJson(json, listType);
-
-        }catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public void onAssociationClick(String associationName) {
+        Intent intent = new Intent(this, DonationActivity.class);
+        intent.putExtra("association", associationName);
+        startActivity(intent);
     }
 }

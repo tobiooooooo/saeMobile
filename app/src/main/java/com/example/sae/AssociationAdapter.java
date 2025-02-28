@@ -22,12 +22,15 @@ public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.
     private List<Association> associationsFull; // Liste complète pour la recherche
     private Context context;
 
+    private OnAssociationClickListener listener;
 
-    public AssociationAdapter(List<Association> associations, Context context) {
+    public AssociationAdapter(List<Association> associations, Context context, OnAssociationClickListener listener) {
         this.associations = associations;
-        this.associationsFull = new ArrayList<>(associations); // Copie complète pour la recherche
+        this.associationsFull = new ArrayList<>(associations);
         this.context = context;
+        this.listener = listener;
     }
+
 
     @NonNull
     @Override
@@ -42,15 +45,21 @@ public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.
         holder.tvNom.setText(association.getNom());
         holder.tvDescription.setText(association.getDescription());
 
-        // Charger l'image depuis le fichier des logos dans assets
         try {
             InputStream is = context.getAssets().open("logos/" + association.getImage());
             Bitmap bitmap = BitmapFactory.decodeStream(is);
             holder.imageView.setImageBitmap(bitmap);
         } catch (IOException e) {
             e.printStackTrace();
-            holder.imageView.setImageResource(R.drawable.default_image); // Image par défaut si manquante
+            holder.imageView.setImageResource(R.drawable.default_image);
         }
+
+        // Détection du clic sur une association
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onAssociationClick(association.getNom());
+            }
+        });
     }
 
     @Override

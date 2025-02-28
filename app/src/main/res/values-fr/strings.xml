@@ -22,6 +22,11 @@
     <string name="Next">next\n</string>
     <string name="mon_recapitulatif">Mon recapitulatif</string>
     <string name="mes_informations_bancaires">Mes informations bancaires</string>
+    <string name="valider">valider</string>
+    <string name="cryptogramme_3_chiffres">Cryptogramme à 3 chiffres</string>
+    <string name="num_ro_de_carte">Numéro de carte</string>
+    <string name="nom_sur_la_carte">Nom sur la carte</string>
+    <string name="association">Association :</string>
 
 
 </resources>

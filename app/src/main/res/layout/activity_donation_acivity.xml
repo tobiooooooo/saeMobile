@@ -17,7 +17,7 @@
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
+
         tools:context=".DonationActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -142,7 +142,7 @@
 
                 <LinearLayout
                     android:layout_width="344dp"
-                    android:layout_height="223dp"
+                    android:layout_height="221dp"
                     android:layout_margin="35dp"
                     android:background="@drawable/bg_login"
                     android:orientation="vertical"
@@ -151,21 +151,22 @@
                     <!-- Titre du formulaire -->
 
 
-                    <!-- Choix de l'association -->
-                    <Spinner
-                        android:id="@+id/association_spinner"
+                    <TextView
+                        android:id="@+id/tv_association"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginBottom="1dp"
-                        android:prompt="@string/choix_association" />
+                        android:text="@string/association"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
 
                     <!-- Montant du don -->
                     <EditText
                         android:id="@+id/input_montant_don"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="17dp"
                         android:hint="@string/montant_du_don"
                         android:inputType="numberDecimal" />
 
@@ -174,7 +175,7 @@
                         android:id="@+id/checkbox_don_recurrent"
                         android:layout_width="187dp"
                         android:layout_height="21dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="18dp"
                         android:text="@string/don_r_current" />
 
                     <Button

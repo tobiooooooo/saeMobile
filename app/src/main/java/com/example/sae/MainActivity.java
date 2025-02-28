@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button makeDonationBtn = (Button) findViewById(R.id.make_donation_btn);
         Button discoverBtn = (Button) findViewById(R.id.discover_btn);
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
         Button scanQRButton = findViewById(R.id.btn_qr_code);
@@ -38,13 +37,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navigation_view);
         ImageButton menuButton = findViewById(R.id.menu_button);
 
-        makeDonationBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DonationActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
         discoverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
