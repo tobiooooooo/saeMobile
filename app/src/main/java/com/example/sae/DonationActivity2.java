@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,15 @@ public class DonationActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
+
+        logoImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(DonationActivity2.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Ferme la page actuelle
+        });
+
 
         // Récupération des éléments UI
         montantTextView = findViewById(R.id.tv_montant);

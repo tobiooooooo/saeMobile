@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 
 import androidx.activity.EdgeToEdge;
@@ -36,6 +37,13 @@ public class ScanQRActivity extends AppCompatActivity {
             return insets;
         });
 
+        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
+
+        logoImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(ScanQRActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Ferme la page actuelle
+        });
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btnn);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
@@ -46,7 +54,7 @@ public class ScanQRActivity extends AppCompatActivity {
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ScanQRActivity.this, Login.class);
+                Intent intent = new Intent(ScanQRActivity.this, LoginAdmin.class);
                 startActivity(intent);
             }
         });

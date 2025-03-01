@@ -36,7 +36,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:orientation="horizontal">
 
             <ImageButton
@@ -93,51 +93,71 @@
             android:textAlignment="center" />
 
         <LinearLayout
+            android:id="@+id/login_redirect_layout"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="123dp"
             android:layout_margin="35dp"
             android:background="@drawable/bg_login"
             android:orientation="vertical"
             android:padding="20dp">
 
+            <TextView
+                android:id="@+id/tv_login_prompt"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/connectez_vous"
+                android:textAlignment="center"
+                android:textSize="16sp" />
 
+            <Button
+                android:id="@+id/btn_login_redirect"
+                android:layout_width="293dp"
+                android:layout_height="wrap_content"
+                android:text="@string/se_connecter" />
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="35dp"
-        android:padding="30dp"
-        android:background="@drawable/bg_login">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="282dp"
+            android:layout_margin="35dp"
+            android:background="@drawable/bg_login"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/discover_association"
+                android:textAlignment="center" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/discover_association"
-                android:textAlignment="center"/>
+                android:text="@string/et_faites_un_don_pour_l_association_de_votre_choix"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/discover_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="@string/discover_btn"/>
+                android:text="@string/discover_btn" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scan_association"
-            android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_association"
+                android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/btn_qr_code"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/qr_code"/>
+            <Button
+                android:id="@+id/btn_qr_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/qr_code" />
 
-    </LinearLayout>
+        </LinearLayout>
 
 
         <!-- ✅ Footer -->

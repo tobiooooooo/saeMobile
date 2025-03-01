@@ -34,8 +34,14 @@
         <activity android:name=".DonationActivity2"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".LoginAdmin"
             android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

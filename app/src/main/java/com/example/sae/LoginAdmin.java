@@ -1,7 +1,5 @@
 package com.example.sae;
 
-import static com.example.sae.R.id.button_connection;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +12,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Login extends AppCompatActivity {
+public class LoginAdmin extends AppCompatActivity {
 
     List<String> admin = List.of("greg","theo","lucas","ethan","ali-shan");
     List<String> adminpsw = List.of("gregmdp","theomdp","lucasmdp","ethanmdp","ali-shanmdp");
@@ -27,7 +24,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_admin);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

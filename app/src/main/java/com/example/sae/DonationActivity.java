@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,8 @@ public class DonationActivity extends AppCompatActivity {
     private CheckBox donRecurrent;
     private Button nextButton;
 
+    private boolean isDonRecurrentChecked = false;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,16 @@ public class DonationActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
+
+        logoImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(DonationActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Ferme la page actuelle
+        });
+
 
         // Initialisation des champs
         TextView tvAssociation = findViewById(R.id.tv_association);
@@ -50,6 +63,20 @@ public class DonationActivity extends AppCompatActivity {
 
         // Désactiver le bouton au début
         nextButton.setEnabled(false);
+
+
+        // Vérifier si on revient de la connexion/inscription
+        isDonRecurrentChecked = getIntent().getBooleanExtra("don_recurrent", false);
+        donRecurrent.setChecked(isDonRecurrentChecked);
+
+
+        // Gestion du clic sur "Don récurrent"
+        donRecurrent.setOnClickListener(v -> {
+            if (!isDonRecurrentChecked) {
+                Intent intent = new Intent(DonationActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         // Récupérer l'association sélectionnée
@@ -80,6 +107,7 @@ public class DonationActivity extends AppCompatActivity {
                     Intent intent = new Intent(DonationActivity.this, DonationActivity2.class);
                     intent.putExtra("association", association);
                     intent.putExtra("montant", editMontant.getText().toString()); // Passer le montant
+                    intent.putExtra("don_recurrent", donRecurrent.isChecked());
                     startActivity(intent);
                 }
             }

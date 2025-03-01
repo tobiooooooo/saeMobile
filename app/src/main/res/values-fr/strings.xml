@@ -27,6 +27,15 @@
     <string name="num_ro_de_carte">Numéro de carte</string>
     <string name="nom_sur_la_carte">Nom sur la carte</string>
     <string name="association">Association :</string>
+    <string name="et_faites_un_don_pour_l_association_de_votre_choix">et faites un don pour l\'association de votre choix</string>
+    <string name="connexion_inscription">Connexion / Inscription</string>
+    <string name="email">Email</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="s_inscrire">S\'inscrire</string>
+    <string name="inscription">Inscription</string>
+    <string name="supprimer_un_compte">Supprimer un compte</string>
+    <string name="connectez_vous">Connectez-vous</string>
 
 
 </resources>

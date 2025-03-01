@@ -2,6 +2,7 @@ package com.example.sae;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,15 @@ public class selection_assos_activity extends AppCompatActivity implements OnAss
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
+
+        logoImageView.setOnClickListener(v -> {
+            Intent intent = new Intent(selection_assos_activity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Ferme la page actuelle
+        });
+
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
