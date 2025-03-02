@@ -45,4 +45,7 @@
     <string name="rechercher">Search</string>
     <string name="menu">Menu</string>
     <string name="param_tres">Settings</string>
+    <string name="nom">Last name</string>
+    <string name="pr_nom">First name</string>
+    <string name="adresse_e_mail">Email adress</string>
 </resources>

@@ -40,6 +40,9 @@
     <string name="rechercher">Rechercher</string>
     <string name="menu">Menu</string>
     <string name="param_tres">Paramètres</string>
+    <string name="nom">Nom</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="adresse_e_mail">Adresse e-mail</string>
 
 
 </resources>
