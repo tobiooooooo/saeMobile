@@ -23,7 +23,7 @@
     <string name="choix_association">Choice of association</string>
     <string name="montant_du_don">Donation amount</string>
     <string name="don_r_current">Recurring donation</string>
-    <string name="Next" translatable="false">next\n</string>
+    <string name="Next">Next</string>
 
     <string name="association_logo">Association\'s logo</string>
     <string name="mon_recapitulatif">My recap</string>
