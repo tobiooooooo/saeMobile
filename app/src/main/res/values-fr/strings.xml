@@ -15,27 +15,31 @@
     <string name="enter_password">Entrez votre mot de passe</string>
     <string name="scan_association">Scannez le code de votre association</string>
     <string name="qr_code">Code QR</string>
+    <string name="scanner_qr_code">Code QR</string>
     <string name="mon_don">Mon don</string>
-    <string name="choix_association">Choix de l\association</string>
+    <string name="choix_association">Choix de l\'association</string>
     <string name="montant_du_don">Montant du don</string>
-    <string name="don_r_current">Don recurrent.</string>
-    <string name="Next">next\n</string>
+    <string name="don_r_current">Don recurrent</string>
+    <string name="association_logo">Logo de l\'association</string>
     <string name="mon_recapitulatif">Mon recapitulatif</string>
     <string name="mes_informations_bancaires">Mes informations bancaires</string>
-    <string name="valider">valider</string>
+    <string name="valider">Valider</string>
     <string name="cryptogramme_3_chiffres">Cryptogramme à 3 chiffres</string>
     <string name="num_ro_de_carte">Numéro de carte</string>
     <string name="nom_sur_la_carte">Nom sur la carte</string>
     <string name="association">Association :</string>
     <string name="et_faites_un_don_pour_l_association_de_votre_choix">et faites un don pour l\'association de votre choix</string>
     <string name="connexion_inscription">Connexion / Inscription</string>
-    <string name="email">Email</string>
+    <string name="email">E-mail</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="se_connecter">Se connecter</string>
     <string name="s_inscrire">S\'inscrire</string>
     <string name="inscription">Inscription</string>
     <string name="supprimer_un_compte">Supprimer un compte</string>
     <string name="connectez_vous">Connectez-vous</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="menu">Menu</string>
+    <string name="param_tres">Paramètres</string>
 
 
 </resources>

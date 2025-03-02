@@ -44,7 +44,7 @@
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Rechercher"
+                android:contentDescription="@string/rechercher"
                 android:src="@drawable/ico_search" />
 
             <Space
@@ -69,7 +69,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ico_menu"
-                android:contentDescription="Menu"
+                android:contentDescription="@string/menu"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +114,7 @@
                 android:id="@+id/btn_login_redirect"
                 android:layout_width="293dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
                 android:text="@string/se_connecter" />
         </LinearLayout>
 
@@ -154,7 +155,7 @@
                 android:id="@+id/btn_qr_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 android:text="@string/qr_code" />
 
         </LinearLayout>
@@ -192,7 +193,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_setting"
-                android:contentDescription="Paramètres"
+                android:contentDescription="@string/param_tres"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 
