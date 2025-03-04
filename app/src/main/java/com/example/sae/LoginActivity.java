@@ -35,14 +35,12 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
-
+        ImageView logoImageView = findViewById(R.id.imageView);
         logoImageView.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
-            finish(); // Ferme la page actuelle
+            finish();
         });
-
 
         etEmail = findViewById(R.id.editTextTextEmailAddress);
         etPassword = findViewById(R.id.editTextTextPassword);
@@ -58,11 +56,13 @@ public class LoginActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 String hashedPassword = hashPassword(password);
 
-                // Vérifier si les identifiants sont valides
                 String savedPassword = prefs.getString(email, null);
                 if (savedPassword != null && savedPassword.equals(hashedPassword)) {
-                    Intent intent = new Intent(LoginActivity.this, DonationActivity.class);
-                    intent.putExtra("don_recurrent", true);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("isLoggedIn", true);
+                    editor.apply();
+
+                    Intent intent = new Intent(LoginActivity.this, selection_assos_activity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -76,8 +76,6 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
-
         btnViewAccounts.setOnClickListener(v -> {
             SharedPreferences preffs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
             StringBuilder accountsList = new StringBuilder();
@@ -86,16 +84,12 @@ public class LoginActivity extends AppCompatActivity {
                 accountsList.append(email).append("\n");
             }
 
-            // Afficher les comptes dans une boîte de dialogue
             new android.app.AlertDialog.Builder(LoginActivity.this)
                     .setTitle("Comptes enregistrés")
                     .setMessage(accountsList.toString())
                     .setPositiveButton("OK", null)
                     .show();
         });
-
-
-
     }
 
     private boolean validateInputs() {

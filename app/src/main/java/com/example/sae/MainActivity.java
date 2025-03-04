@@ -1,12 +1,15 @@
 package com.example.sae;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +51,18 @@ public class MainActivity extends AppCompatActivity {
         ImageButton menuButton = findViewById(R.id.menu_button);
         LinearLayout loginRedirectLayout = findViewById(R.id.login_redirect_layout);
         Button loginRedirectButton = findViewById(R.id.btn_login_redirect);
+
+
+        Button logoutButton = findViewById(R.id.btn_logout);
+
+        logoutButton.setOnClickListener(v -> {
+            SharedPreferences prefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isLoggedIn", false); // ✅ Déconnecte l'utilisateur
+            editor.apply();
+
+            Toast.makeText(MainActivity.this, "Déconnecté avec succès", Toast.LENGTH_SHORT).show();
+        });
 
 
         discoverBtn.setOnClickListener(new View.OnClickListener() {

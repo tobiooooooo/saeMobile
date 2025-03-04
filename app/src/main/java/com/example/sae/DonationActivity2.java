@@ -20,7 +20,7 @@ public class DonationActivity2 extends AppCompatActivity {
 
     private EditText etNomCarte, etNumeroCarte, etCryptogramme;
     private Button btnNext;
-    private TextView montantTextView;
+    private TextView montantTextView, tvDonType;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -34,24 +34,21 @@ public class DonationActivity2 extends AppCompatActivity {
             return insets;
         });
 
-        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
-
+        ImageView logoImageView = findViewById(R.id.imageView);
         logoImageView.setOnClickListener(v -> {
             Intent intent = new Intent(DonationActivity2.this, MainActivity.class);
             startActivity(intent);
-            finish(); // Ferme la page actuelle
+            finish();
         });
 
-
-        // Récupération des éléments UI
         montantTextView = findViewById(R.id.tv_montant);
         etNomCarte = findViewById(R.id.et_nom_carte);
         etNumeroCarte = findViewById(R.id.et_numero_carte);
         etCryptogramme = findViewById(R.id.et_cryptogramme);
         btnNext = findViewById(R.id.btn_next);
         TextView tvAssociationRecap = findViewById(R.id.tv_association_recap);
+        tvDonType = findViewById(R.id.tv_don_type); // ✅ Ajouter ici
 
-        // Récupérer le montant envoyé par DonationActivity
         Intent intent = getIntent();
         if (intent.hasExtra("montant")) {
             String montant = intent.getStringExtra("montant");
@@ -63,21 +60,19 @@ public class DonationActivity2 extends AppCompatActivity {
             tvAssociationRecap.setText("Association : " + association);
         }
 
+        // ✅ Récupérer et afficher le type de don
+        if (intent.hasExtra("don_type")) {
+            String donType = intent.getStringExtra("don_type");
+            tvDonType.setText("Type de don : " + donType);
+        }
 
-        // Activation du bouton après validation des champs
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (validateInputs()) {
-                    // Passer à l'étape suivante
-                    Toast.makeText(DonationActivity2.this, "Paiement validé !", Toast.LENGTH_SHORT).show();
-                    // Ajoute ici l'intent pour aller vers une autre page si nécessaire
-                }
+        btnNext.setOnClickListener(v -> {
+            if (validateInputs()) {
+                Toast.makeText(DonationActivity2.this, "Paiement validé !", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    // Validation des champs carte
     private boolean validateInputs() {
         if (etNomCarte.getText().toString().trim().isEmpty()) {
             etNomCarte.setError("Veuillez entrer le nom sur la carte");
