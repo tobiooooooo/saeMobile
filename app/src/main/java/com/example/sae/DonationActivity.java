@@ -21,7 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DonationActivity extends AppCompatActivity {
 
-    private EditText editNom, editPrenom, editMail, editMontant;
+    private EditText editNom, editPrenom, editMontant;
     private CheckBox donRecurrent;
     private Button nextButton;
 
@@ -47,7 +47,6 @@ public class DonationActivity extends AppCompatActivity {
         TextView tvAssociation = findViewById(R.id.tv_association);
         editNom = findViewById(R.id.input_nom);
         editPrenom = findViewById(R.id.input_prenom);
-        editMail = findViewById(R.id.input_email);
         editMontant = findViewById(R.id.input_montant_don);
         donRecurrent = findViewById(R.id.checkbox_don_recurrent);
         nextButton = findViewById(R.id.btn_next);
@@ -72,7 +71,6 @@ public class DonationActivity extends AppCompatActivity {
         View.OnFocusChangeListener inputWatcher = (v, hasFocus) -> validateInputs();
         editNom.setOnFocusChangeListener(inputWatcher);
         editPrenom.setOnFocusChangeListener(inputWatcher);
-        editMail.setOnFocusChangeListener(inputWatcher);
         editMontant.setOnFocusChangeListener(inputWatcher);
 
         nextButton.setOnClickListener(v -> {
@@ -91,13 +89,7 @@ public class DonationActivity extends AppCompatActivity {
     }
 
     private boolean validateInputs() {
-        String email = editMail.getText().toString().trim();
         String montantStr = editMontant.getText().toString().trim();
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editMail.setError("Veuillez entrer une adresse e-mail valide");
-            return false;
-        }
 
         if (montantStr.isEmpty()) {
             editMontant.setError("Veuillez entrer un montant");
