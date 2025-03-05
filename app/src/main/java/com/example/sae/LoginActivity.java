@@ -81,15 +81,18 @@ public class LoginActivity extends AppCompatActivity {
             StringBuilder accountsList = new StringBuilder();
 
             for (String email : preffs.getAll().keySet()) {
-                accountsList.append(email).append("\n");
+                if (!email.equals("isLoggedIn")) { // Ne pas afficher la clé "isLoggedIn"
+                    accountsList.append(email).append("\n");
+                }
             }
 
             new android.app.AlertDialog.Builder(LoginActivity.this)
                     .setTitle("Comptes enregistrés")
-                    .setMessage(accountsList.toString())
+                    .setMessage(accountsList.toString().trim()) // Trim pour enlever les espaces inutiles
                     .setPositiveButton("OK", null)
                     .show();
         });
+
     }
 
     private boolean validateInputs() {
