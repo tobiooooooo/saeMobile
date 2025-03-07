@@ -1,9 +1,11 @@
 package com.example.sae;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -12,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
@@ -21,7 +24,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout loginRedirectLayout = findViewById(R.id.login_redirect_layout);
         Button loginRedirectButton = findViewById(R.id.btn_login_redirect);
 
+        navigationView.setNavigationItemSelectedListener(this);
 
         Button logoutButton = findViewById(R.id.btn_logout);
 
@@ -108,5 +112,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+    //fonction qui gère les boutons du menu burger la page settings en commentaire car pas encore faite
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            int id = item.getItemId();
+
+            if (id == R.id.nav_home) {
+                startActivity(new Intent(this, MainActivity.class));
+            } else if (id == R.id.nav_donation) {
+                startActivity(new Intent(this, DonationActivity.class));
+            } else if (id == R.id.nav_associations) {
+                startActivity(new Intent(this, selection_assos_activity.class));
+            } else if (id == R.id.nav_qr) {
+                startActivity(new Intent(this, ScanQRActivity.class));
+//            } else if (id == R.id.nav_settings) {
+//                startActivity(new Intent(this, SettingsActivity.class));
+            } else if (id == R.id.nav_aideFAQ) {
+                startActivity(new Intent(this, activity_aide.class));
+            }
+
+            // Fermer le menu après un clic
+            DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+            drawerLayout.closeDrawer(GravityCompat.START);
+
+            return true;
     }
 }

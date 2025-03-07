@@ -1,21 +1,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:title="oui"
+        android:title="Accueil"
         />
     <item
         android:id="@+id/nav_donation"
-        android:title="oui"
+        android:title="Faire un don"
         />
     <item
         android:id="@+id/nav_associations"
-        android:title="oui"
+        android:title="Liste de nos associations"
         />
     <item
         android:id="@+id/nav_qr"
-        android:title="oui"
+        android:title="scan QR"
         />
-    <item
+    <!--<item
         android:id="@+id/nav_settings"
-        android:title="oui" />
+        android:title="oui" />-->
+    <item
+        android:id="@+id/nav_aideFAQ"
+        android:title="aide / FAQ" />
 </menu>
