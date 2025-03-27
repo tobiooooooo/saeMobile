@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="12dp"
-    android:background="@android:color/white"
+    android:minHeight="72dp"
     tools:context=".elementListeFAQ">
 
     <!-- Sous-question -->
@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
         android:textStyle="bold"
         android:paddingBottom="4dp"/>
 

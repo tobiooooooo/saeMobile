@@ -62,20 +62,18 @@ public class HelpAdapter extends BaseExpandableListAdapter
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
-        if(convertView == null)
-        {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(android.R.layout.simple_expandable_list_item_1, null);
+
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.group_item_aide, null);
         }
 
-        TextView lblListHeader = convertView.findViewById(android.R.id.text1);
+        TextView lblListHeader = convertView.findViewById(R.id.lblListHeader);
         lblListHeader.setText(headerTitle);
-        lblListHeader.setTextSize(18);
-        lblListHeader.setTypeface(null, Typeface.BOLD); // Texte en gras
-        lblListHeader.setGravity(Gravity.CENTER); // Centre le texte
 
         return convertView;
     }
+
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {

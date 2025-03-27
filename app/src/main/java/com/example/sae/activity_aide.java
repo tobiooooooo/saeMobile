@@ -46,22 +46,46 @@ public class activity_aide extends AppCompatActivity {
         listHeaders = new ArrayList<>();
         listChildren = new HashMap<>();
 
-        listHeaders.add("Données personnelles");
+        listHeaders.add("Dons et transactions");
 
-        List<String[]> questionsReponsesDonnees = new ArrayList<>();
-        questionsReponsesDonnees.add(new String[]{"Où vont mes données ?", "Vos données sont stockées sur nos serveurs sécurisés."});
-        questionsReponsesDonnees.add(new String[]{"Mes données sont-elles vendues ?", "Non, nous ne vendons jamais vos données."});
-        questionsReponsesDonnees.add(new String[]{"Comment puis-je supprimer mes données ?", "Rendez-vous dans les paramètres et sélectionnez 'Supprimer mon compte'."});
+        List<String[]> donsEtTransactions = new ArrayList<>();
+        donsEtTransactions.add(new String[]{"Comment faire un don ?", "Choisissez une association, puis cliquez sur 'Faire un don' et suivez les instructions."});
+        donsEtTransactions.add(new String[]{"Quels moyens de paiement sont acceptés ?", "Vous pouvez payer par carte bancaire, PayPal ou virement."});
+        donsEtTransactions.add(new String[]{"Est-ce que mon don est sécurisé ?", "Oui, nous utilisons un système de paiement sécurisé conforme aux normes PCI-DSS."});
+        donsEtTransactions.add(new String[]{"Puis-je obtenir un reçu fiscal ?", "Oui, un reçu est automatiquement généré si l'association est habilitée à en délivrer."});
 
-        // 🏆 Catégorie : Sécurité
-        listHeaders.add("Sécurité");
+        listHeaders.add("Compte utilisateur");
 
-        List<String[]> questionsReponsesSecurite = new ArrayList<>();
-        questionsReponsesSecurite.add(new String[]{"Comment activer la double authentification ?", "Allez dans les paramètres > Sécurité > 2FA et suivez les instructions."});
-        questionsReponsesSecurite.add(new String[]{"Que faire en cas de vol de mon compte ?", "Contactez notre support immédiatement pour sécuriser votre compte."});
+        List<String[]> compteUtilisateur = new ArrayList<>();
+        compteUtilisateur.add(new String[]{"Comment créer un compte ?", "Cliquez sur 'S'inscrire' depuis l'écran d'accueil et remplissez le formulaire."});
+        compteUtilisateur.add(new String[]{"J'ai oublié mon mot de passe, que faire ?", "Utilisez la fonction 'Mot de passe oublié' sur l'écran de connexion."});
+        compteUtilisateur.add(new String[]{"Puis-je modifier mes informations personnelles ?", "Oui, dans l'onglet 'Mon compte' vous pouvez modifier vos données."});
 
-        // 🔥 Associer les questions à leurs catégories
-        listChildren.put(listHeaders.get(0), questionsReponsesDonnees);
-        listChildren.put(listHeaders.get(1), questionsReponsesSecurite);
+        listHeaders.add("Problèmes techniques");
+
+        List<String[]> problemesTechniques = new ArrayList<>();
+        problemesTechniques.add(new String[]{"L'application plante, que faire ?", "Essayez de redémarrer l'application ou de la réinstaller. Si le problème persiste, contactez-nous."});
+        problemesTechniques.add(new String[]{"Je ne reçois pas les notifications", "Assurez-vous que les notifications sont activées dans les paramètres de votre téléphone."});
+        problemesTechniques.add(new String[]{"Un bug est survenu pendant un don", "Le montant ne sera pas débité. Vous pouvez réessayer ou contacter le support si besoin."});
+
+        listHeaders.add("À propos de l’application");
+
+        List<String[]> aPropos = new ArrayList<>();
+        aPropos.add(new String[]{"Quel est le but de cette application ?", "Elle permet de faire des dons facilement à des associations engagées."});
+        aPropos.add(new String[]{"L’application est-elle gratuite ?", "Oui, elle est 100% gratuite pour les utilisateurs."});
+        aPropos.add(new String[]{"Comment sont choisies les associations ?", "Elles sont sélectionnées selon leur sérieux, leur transparence et leur impact social."});
+
+        listHeaders.add("Autre questions");
+
+        List<String[]> autreQuestions = new ArrayList<>();
+        autreQuestions.add(new String[]{"L'application est-elle accessible aux personnes handicapées ?", "Oui, elle est compatible avec les lecteurs d’écran et respecte les normes d’accessibilité WCAG."});
+        autreQuestions.add(new String[]{"Puis-je faire un don pour une cause liée au handicap ?", "Oui, plusieurs associations partenaires œuvrent pour l’inclusion et le soutien aux personnes en situation de handicap."});
+
+        listChildren.put(listHeaders.get(0), donsEtTransactions);
+        listChildren.put(listHeaders.get(1), compteUtilisateur);
+        listChildren.put(listHeaders.get(2), problemesTechniques);
+        listChildren.put(listHeaders.get(3), aPropos);
+        listChildren.put(listHeaders.get(4), autreQuestions);
+
     }
 }
