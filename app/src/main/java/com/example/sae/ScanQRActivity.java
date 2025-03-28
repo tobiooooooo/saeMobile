@@ -3,6 +3,7 @@ package com.example.sae;
 import android.content.Intent;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
@@ -24,7 +26,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 
-public class ScanQRActivity extends AppCompatActivity {
+public class ScanQRActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class ScanQRActivity extends AppCompatActivity {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START);
+                drawerLayout.openDrawer(GravityCompat.END);
             }
         });
 
@@ -72,6 +74,8 @@ public class ScanQRActivity extends AppCompatActivity {
         Button scanQRButton;
         scanQRButton = findViewById(R.id.scan_qr_button);
         scanQRButton.setOnClickListener(v -> startQRScanner());
+
+        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -100,4 +104,28 @@ public class ScanQRActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            startActivity(new Intent(this, MainActivity.class));
+        } else if (id == R.id.nav_donation) {
+            startActivity(new Intent(this, DonationActivity.class));
+        } else if (id == R.id.nav_associations) {
+            startActivity(new Intent(this, selection_assos_activity.class));
+        } else if (id == R.id.nav_qr) {
+            startActivity(new Intent(this, ScanQRActivity.class));
+//            } else if (id == R.id.nav_settings) {
+//                startActivity(new Intent(this, SettingsActivity.class));
+        } else if (id == R.id.nav_aideFAQ) {
+            startActivity(new Intent(this, activity_aide.class));
+        }
+
+        // Fermer le menu après un clic
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.END);
+
+        return true;
+    }
 }

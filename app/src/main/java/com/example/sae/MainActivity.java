@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START);
+                drawerLayout.openDrawer(GravityCompat.END);
             }
         });
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             // Fermer le menu après un clic
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-            drawerLayout.closeDrawer(GravityCompat.START);
+            drawerLayout.closeDrawer(GravityCompat.END);
 
             return true;
     }
