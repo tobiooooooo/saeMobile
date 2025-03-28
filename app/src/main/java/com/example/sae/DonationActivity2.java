@@ -3,20 +3,27 @@ package com.example.sae;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class DonationActivity2 extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
+
+public class DonationActivity2 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private EditText etNomCarte, etNumeroCarte, etCryptogramme;
     private Button btnNext;
@@ -28,7 +35,7 @@ public class DonationActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_donationa_acivity2);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -71,6 +78,26 @@ public class DonationActivity2 extends AppCompatActivity {
                 Toast.makeText(DonationActivity2.this, "Paiement validé !", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ImageButton menuButton = findViewById(R.id.menu_button);
+        menuButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
+
+
+        Button logInBtn = (Button) findViewById(R.id.log_in_btn);
+
+        logInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DonationActivity2.this, LoginAdmin.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private boolean validateInputs() {
@@ -86,6 +113,34 @@ public class DonationActivity2 extends AppCompatActivity {
             etCryptogramme.setError("Le cryptogramme doit être de 3 chiffres");
             return false;
         }
+        return true;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            startActivity(new Intent(this, MainActivity.class));
+        } else if (id == R.id.nav_donation) {
+            startActivity(new Intent(this, DonationActivity.class));
+        } else if (id == R.id.nav_associations) {
+            startActivity(new Intent(this, selection_assos_activity.class));
+        } else if (id == R.id.nav_qr) {
+            startActivity(new Intent(this, ScanQRActivity.class));
+//            } else if (id == R.id.nav_settings) {
+//                startActivity(new Intent(this, SettingsActivity.class));
+        } else if (id == R.id.nav_aideFAQ) {
+            startActivity(new Intent(this, activity_aide.class));
+        }else if (id == R.id.nav_register) {
+            startActivity(new Intent(this, RegisterActivity.class));
+        }
+
+
+        // Fermer le menu après un clic
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.END);
+
         return true;
     }
 }

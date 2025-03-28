@@ -142,7 +142,10 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
 //                startActivity(new Intent(this, SettingsActivity.class));
         } else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
+        }else if (id == R.id.nav_register) {
+            startActivity(new Intent(this, RegisterActivity.class));
         }
+
 
         // Fermer le menu après un clic
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);

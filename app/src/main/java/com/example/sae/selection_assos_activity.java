@@ -135,6 +135,8 @@ public class selection_assos_activity extends AppCompatActivity implements OnAss
 //                startActivity(new Intent(this, SettingsActivity.class));
         } else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
+        }else if (id == R.id.nav_register) {
+            startActivity(new Intent(this, RegisterActivity.class));
         }
 
         // Fermer le menu après un clic
