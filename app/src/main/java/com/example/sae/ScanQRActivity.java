@@ -110,8 +110,6 @@ public class ScanQRActivity extends AppCompatActivity implements NavigationView.
 
         if (id == R.id.nav_home) {
             startActivity(new Intent(this, MainActivity.class));
-        } else if (id == R.id.nav_donation) {
-            startActivity(new Intent(this, DonationActivity.class));
         } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
