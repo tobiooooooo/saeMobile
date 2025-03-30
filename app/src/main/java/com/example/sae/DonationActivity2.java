@@ -2,6 +2,7 @@ package com.example.sae;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +23,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class DonationActivity2 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -80,11 +85,30 @@ public class DonationActivity2 extends AppCompatActivity implements NavigationVi
             tvDonType.setText("Type de don : " + donType);
         }
 
+
+
         btnNext.setOnClickListener(v -> {
             if (validateInputs()) {
-                Toast.makeText(DonationActivity2.this, "Paiement validé !", Toast.LENGTH_SHORT).show();
+                String montant = getIntent().getStringExtra("montant");
+                String association = getIntent().getStringExtra("association");
+                String donType = getIntent().getStringExtra("don_type");
+                String dateDon = new SimpleDateFormat("dd/MM/yyyy HH:mm",
+                        Locale.getDefault()).format(new Date());
+
+
+                SharedPreferences prefs = getSharedPreferences("DonsPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+
+                editor.putString("dernier_montant", montant);
+                editor.putString("derniere_association", association);
+                editor.putString("dernier_type_don", donType);
+                editor.putString("dernier_don_date", dateDon);
+                editor.apply();
+
+                Toast.makeText(DonationActivity2.this, "Paiement validé et don enregistré !", Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
 

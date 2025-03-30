@@ -28,6 +28,9 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/Theme.SAE" />
         <activity
+            android:name=".TableauDeBordActivity"
+            android:exported="false" />
+        <activity
             android:name=".elementListeFAQ"
             android:exported="false" />
         <activity
@@ -54,8 +57,6 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
-        <activity android:name=".SettingsActivity"
-                   android:exported ="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

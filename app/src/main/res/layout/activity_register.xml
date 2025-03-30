@@ -21,26 +21,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="75dp"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/search_icon"
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Rechercher"
-                        android:src="@drawable/ico_search" />
-
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
                     <ImageView
                         android:id="@+id/imageView"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="16dp"
                         app:srcCompat="@drawable/logo_couleur" />
 
                     <Space
@@ -53,13 +41,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ico_menu"
-                        android:contentDescription="Menu"
+                        android:contentDescription="@string/menu"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_margin="16dp"/>
-
-
                 </LinearLayout>
 
                 <View
@@ -115,7 +99,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Confirmer le mot de passe"
+                        android:text="@string/confirmer_le_mot_de_passe"
                         android:layout_marginTop="20dp"/>
 
                     <EditText
@@ -123,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:inputType="textPassword"
-                        android:hint="Confirmer le mot de passe"/>
+                        android:hint="@string/confirmer_le_mot_de_passe"/>
 
 
 
