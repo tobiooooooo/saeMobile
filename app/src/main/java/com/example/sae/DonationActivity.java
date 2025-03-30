@@ -85,7 +85,8 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
                 Intent intent = new Intent(DonationActivity.this, DonationActivity2.class);
                 intent.putExtra("association", association);
                 intent.putExtra("montant", editMontant.getText().toString());
-
+                intent.putExtra("nom", editNom.getText().toString());
+                intent.putExtra("prenom", editPrenom.getText().toString());
                 // ✅ Transmettre le type de don (Récurrent ou Unique)
                 boolean isRecurrent = donRecurrent.isChecked();
                 intent.putExtra("don_type", isRecurrent ? "Récurrent" : "Unique");
@@ -115,16 +116,31 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
     }
 
     private boolean validateInputs() {
+        String nomStr = editNom.getText().toString().trim();
+        String prenomStr = editPrenom.getText().toString().trim();
         String montantStr = editMontant.getText().toString().trim();
+
+        boolean isValid = true;
+
+        if (nomStr.isEmpty()) {
+            editNom.setError("Veuillez entrer un nom");
+            isValid = false;
+        }
+
+        if (prenomStr.isEmpty()) {
+            editPrenom.setError("Veuillez entrer un prénom");
+            isValid = false;
+        }
 
         if (montantStr.isEmpty()) {
             editMontant.setError("Veuillez entrer un montant");
-            return false;
+            isValid = false;
         }
 
-        nextButton.setEnabled(true);
-        return true;
+        nextButton.setEnabled(isValid);
+        return isValid;
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
