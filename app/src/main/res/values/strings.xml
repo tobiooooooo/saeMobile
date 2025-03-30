@@ -68,15 +68,14 @@
     <string name="addictions">Addictions</string>
     <string name="cardio_donation">Cardiovascular, Donations, and Transplants</string>
     <string name="cancer_support">Cancer and Support</string>
-    <string name="pour_les_administrateurs">Pour les administrateurs</string>
-    <string name="r_sum_des_dons_collect_s">Résumé des dons collectés</string>
-    <string name="total_des_dons_collect_s">Total des dons collectés</string>
-    <string name="nombre_total_de_dons_effectu_s">Nombre total de dons effectués</string>
-    <string name="zero_euro">0.00€</string>
-    <string name="dons_re_us_ce_mois_ci">Dons reçus ce mois-ci</string>
-    <string name="_0_00">0.00€</string>
-    <string name="donateur">Donateur</string>
+    <string name="pour_les_administrateurs">For administrators</string>
+    <string name="r_sum_des_dons_collect_s">Summary of collected donations</string>
+    <string name="total_des_dons_collect_s">Total amount of donations</string>
+    <string name="nombre_total_de_dons_effectu_s">Total number of donations</string>
+    <string name="zero_euro" translatable="false">0.00€</string>
+    <string name="dons_re_us_ce_mois_ci">Amount of donations this month</string>
+    <string name="donateur">Donator</string>
     <string name="date">Date</string>
-    <string name="statistiques_des_dons">Statistiques des dons</string>
+    <string name="statistiques_des_dons">Donation statistics</string>
 
 </resources>
