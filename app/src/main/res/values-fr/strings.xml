@@ -73,4 +73,5 @@
     <string name="donateur">Donateur</string>
     <string name="date">Date</string>
     <string name="statistiques_des_dons">Statistiques des dons</string>
+    <string name="don_enregistre">Paiement validé et don enregistré !</string>
 </resources>
