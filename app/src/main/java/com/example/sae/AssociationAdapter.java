@@ -93,4 +93,15 @@ public class AssociationAdapter extends RecyclerView.Adapter<AssociationAdapter.
             tvDescription = itemView.findViewById(R.id.tvDescription);
         }
     }
+    public void setAssociations(List<Association> newAssociations) {
+        associations.clear();
+        associations.addAll(newAssociations);
+
+        associationsFull.clear();
+        associationsFull.addAll(newAssociations);
+
+        notifyDataSetChanged();
+    }
+
+
 }

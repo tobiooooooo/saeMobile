@@ -47,9 +47,19 @@
 
     <string name="drawer_accueil">Accueil</string>
     <string name="drawer_liste_assos">Liste de nos associations</string>
-    <string name="drawer_qrCode">Code QR</string>
+    <string name="drawer_qrCode">Qr code</string>
     <string name="drawer_aideFAQ">Aide/FAQ</string>
     <string name="drawer_sinscrire">S\'inscrire</string>
+
+    <string name="all_categories">Toutes les catégories</string>
+    <string name="handicap">Handicap</string>
+    <string name="mental_health">Santé Mentale</string>
+    <string name="chronic_rare_diseases">Maladies Chroniques et Rares</string>
+    <string name="social_support">Soutien social et consommateurs</string>
+    <string name="addictions">Dépendances</string>
+    <string name="cardio_donation">Associations cardiovasculaires, dons et greffes</string>
+    <string name="cancer_support">Cancer et accompagnement</string>
+
     <string name="montant">Montant :</string>
     <string name="type_de_don">Type de don :</string>
     <string name="voir_comptes_enregistr_s">Voir comptes enregistrés</string>
