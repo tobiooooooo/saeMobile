@@ -68,6 +68,12 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         ImageButton menuButton = findViewById(R.id.menu_button);
         menuButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginAdmin.this, SettingsActivity.class);
+            startActivity(intent);
+        });
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 

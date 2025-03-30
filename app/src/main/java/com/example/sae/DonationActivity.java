@@ -51,6 +51,13 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
             finish();
         });
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(DonationActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
         TextView tvAssociation = findViewById(R.id.tv_association);
         editNom = findViewById(R.id.input_nom);
         editPrenom = findViewById(R.id.input_prenom);

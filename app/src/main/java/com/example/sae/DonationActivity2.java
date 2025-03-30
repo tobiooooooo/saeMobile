@@ -46,7 +46,14 @@ public class DonationActivity2 extends AppCompatActivity implements NavigationVi
             Intent intent = new Intent(DonationActivity2.this, MainActivity.class);
             startActivity(intent);
             finish();
+        });ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(DonationActivity2.this, SettingsActivity.class);
+            startActivity(intent);
         });
+
+
 
         montantTextView = findViewById(R.id.tv_montant);
         etNomCarte = findViewById(R.id.et_nom_carte);

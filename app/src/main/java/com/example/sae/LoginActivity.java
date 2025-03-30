@@ -50,6 +50,13 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
             finish();
         });
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
         etEmail = findViewById(R.id.editTextTextEmailAddress);
         etPassword = findViewById(R.id.editTextTextPassword);
         btnLogin = findViewById(R.id.button_connection);

@@ -52,7 +52,12 @@ public class ScanQRActivity extends AppCompatActivity implements NavigationView.
         NavigationView navigationView = findViewById(R.id.navigation_view);
         ImageButton menuButton = findViewById(R.id.menu_button);
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
 
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(ScanQRActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

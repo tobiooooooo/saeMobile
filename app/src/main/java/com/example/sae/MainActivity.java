@@ -59,6 +59,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Button logoutButton = findViewById(R.id.btn_logout);
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
+
         logoutButton.setOnClickListener(v -> {
             SharedPreferences prefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();

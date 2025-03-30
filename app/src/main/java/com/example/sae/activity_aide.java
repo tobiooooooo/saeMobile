@@ -65,6 +65,13 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
                 Intent intent = new Intent(activity_aide.this, LoginAdmin.class);
                 startActivity(intent);
             }
+
+        });
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(activity_aide.this, SettingsActivity.class);
+            startActivity(intent);
         });
 
     }

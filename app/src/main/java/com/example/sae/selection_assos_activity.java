@@ -52,6 +52,12 @@ public class selection_assos_activity extends AppCompatActivity implements OnAss
             startActivity(intent);
             finish(); // Ferme la page actuelle
         });
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(selection_assos_activity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
 
 
         recyclerView = findViewById(R.id.recyclerView);

@@ -53,6 +53,12 @@ public class RegisterActivity extends AppCompatActivity implements NavigationVie
             finish(); // Ferme la page actuelle
         });
 
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(RegisterActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
 
         etEmail = findViewById(R.id.editTextTextEmailAddress);
         etPassword = findViewById(R.id.editTextTextPassword);
