@@ -29,8 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="189dp">
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
                 <!-- ✅ Header -->
 
@@ -67,8 +67,197 @@
                     android:layout_height="5px"
                     android:background="@color/black"/>
 
-                <!-- edit ici -->
 
+                <LinearLayout
+                    android:id="@+id/resume_dons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_login"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pour_les_administrateurs"
+                        android:textAlignment="textStart"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/r_sum_des_dons_collect_s"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_marginVertical="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_des_dons_collect_s"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FF00c7be"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/total_dons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_euro"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFd0f7fe"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dons_re_us_ce_mois_ci"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FF7876f6"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/dons_recus_ce_mois_ci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_euro"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFe8e6f6"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_total_de_dons_effectu_s"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FFec5637"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/nombre_total_de_dons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_euro"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFfce6e7"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/bg_login"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dernier don"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/donateur"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FF00c7be"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/dernier_donateur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFd0f7fe"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/montant_du_don"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FF7876f6"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/montant_du_dernier_don"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/zero_euro"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFe8e6f6"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FFec5637"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                    <TextView
+                        android:id="@+id/date_dernier_don"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:background="#FFfce6e7"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/type_du_dernier_don"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:background="#FFfce6e7"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="5dp"/>
+
+
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_login_redirect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="35dp"
+                    android:text="@string/statistiques_des_dons" />
 
                 <!-- ✅ Footer -->
                 <Space
@@ -105,6 +294,7 @@
                         android:contentDescription="@string/param_tres"
                         android:background="?attr/selectableItemBackgroundBorderless"/>
                 </LinearLayout>
+
 
 
             </LinearLayout>
