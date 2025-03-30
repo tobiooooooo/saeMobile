@@ -104,7 +104,7 @@
                         android:text="@string/total_des_dons_collect_s"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FF00c7be"
+                        android:background="@color/menthe"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -114,7 +114,7 @@
                         android:text="@string/zero_euro"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFd0f7fe"
+                        android:background="@color/menthe_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
@@ -124,7 +124,7 @@
                         android:text="@string/dons_re_us_ce_mois_ci"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FF7876f6"
+                        android:background="@color/indigo"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -134,7 +134,7 @@
                         android:text="@string/zero_euro"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFe8e6f6"
+                        android:background="@color/indigo_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
@@ -144,7 +144,7 @@
                         android:text="@string/nombre_total_de_dons_effectu_s"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FFec5637"
+                        android:background="@color/orange"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -154,7 +154,7 @@
                         android:text="@string/zero_euro"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFfce6e7"
+                        android:background="@color/orange_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
@@ -187,7 +187,7 @@
                         android:text="@string/donateur"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FF00c7be"
+                        android:background="@color/menthe"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -196,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFd0f7fe"
+                        android:background="@color/menthe_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
@@ -206,7 +206,7 @@
                         android:text="@string/montant_du_don"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FF7876f6"
+                        android:background="@color/indigo"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -216,7 +216,7 @@
                         android:text="@string/zero_euro"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFe8e6f6"
+                        android:background="@color/indigo_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
@@ -226,7 +226,7 @@
                         android:text="@string/date"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FFec5637"
+                        android:background="@color/orange"
                         android:textColor="@color/black"
                         android:layout_marginTop="5dp"/>
                     <TextView
@@ -235,7 +235,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="24sp"
                         android:textAlignment="center"
-                        android:background="#FFfce6e7"
+                        android:background="@color/orange_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
                     <TextView
@@ -244,7 +244,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:textAlignment="center"
-                        android:background="#FFfce6e7"
+                        android:background="@color/orange_clair"
                         android:textColor="@color/black"
                         android:layout_marginBottom="5dp"/>
 
