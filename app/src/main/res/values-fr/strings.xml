@@ -45,5 +45,9 @@
     <string name="pr_nom">Prénom</string>
     <string name="adresse_e_mail">Adresse e-mail</string>
 
-
+    <string name="drawer_accueil">Accueil</string>
+    <string name="drawer_liste_assos">Liste de nos associations</string>
+    <string name="drawer_qrCode">Qr code</string>
+    <string name="drawer_aideFAQ">Aide/FAQ</string>
+    <string name="drawer_sinscrire">S\'inscrire</string>
 </resources>

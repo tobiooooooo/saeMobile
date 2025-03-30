@@ -1,23 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:title="Accueil"
+        android:title="@string/drawer_accueil"
         />
     <item
         android:id="@+id/nav_associations"
-        android:title="Liste de nos associations"
+        android:title="@string/drawer_liste_assos"
         />
     <item
         android:id="@+id/nav_qr"
-        android:title="scan QR"
+        android:title="@string/drawer_qrCode"
         />
     <!--<item
         android:id="@+id/nav_settings"
         android:title="oui" />-->
     <item
         android:id="@+id/nav_aideFAQ"
-        android:title="aide / FAQ" />
+        android:title="@string/drawer_aideFAQ" />
     <item
         android:id="@+id/nav_register"
-        android:title="s'inscrire" />
+        android:title="@string/drawer_sinscrire" />
 </menu>
