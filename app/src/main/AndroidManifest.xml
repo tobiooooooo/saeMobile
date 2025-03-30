@@ -23,6 +23,9 @@
         android:theme="@style/Theme.SAE"
         tools:targetApi="31">
         <activity
+            android:name=".TableauDeBordActivity"
+            android:exported="false" />
+        <activity
             android:name=".elementListeFAQ"
             android:exported="false" />
         <activity

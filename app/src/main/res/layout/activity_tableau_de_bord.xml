@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonationActivity">
+    tools:context=".TableauDeBordActivity">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="189dp">
 
                 <!-- ✅ Header -->
 
@@ -65,89 +84,7 @@
                     android:layout_height="5px"
                     android:background="@color/black"/>
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:layout_margin="35dp"
-                    android:background="@drawable/bg_login"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Coord"
-                        android:textAlignment="center"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/input_nom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:hint="@string/nom"
-                        android:inputType="textPersonName" />
-
-                    <EditText
-                        android:id="@+id/input_prenom"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:hint="@string/pr_nom"
-                        android:inputType="textPersonName" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:layout_margin="35dp"
-                    android:background="@drawable/bg_login"
-                    android:orientation="vertical">
-
-                    <!-- Titre du formulaire -->
-
-
-                    <TextView
-                        android:id="@+id/tv_association"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="@string/association"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-
-                    <!-- Montant du don -->
-                    <EditText
-                        android:id="@+id/input_montant_don"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="17dp"
-                        android:hint="@string/montant_du_don"
-                        android:inputType="numberDecimal" />
-
-                    <!-- Don récurrent -->
-                    <CheckBox
-                        android:id="@+id/checkbox_don_recurrent"
-                        android:layout_width="187dp"
-                        android:layout_height="21dp"
-                        android:layout_marginBottom="18dp"
-                        android:text="@string/don_r_current" />
-
-                    <Button
-                        android:id="@+id/btn_next"
-                        android:layout_width="match_parent"
-                        android:layout_height="38dp"
-                        android:layout_margin="1dp"
-                        android:text="@string/Next" />
-
-
-                </LinearLayout>
+                <!-- edit ici -->
 
 
                 <!-- ✅ Footer -->
@@ -185,11 +122,23 @@
                         android:contentDescription="@string/param_tres"
                         android:background="?attr/selectableItemBackgroundBorderless"/>
                 </LinearLayout>
+
+
             </LinearLayout>
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        app:menu="@menu/drawer_menu" />
-</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 📜 Menu latéral -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:menu="@menu/drawer_menu"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

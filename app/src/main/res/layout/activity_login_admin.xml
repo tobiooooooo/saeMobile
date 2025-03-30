@@ -30,7 +30,7 @@
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Rechercher"
+                android:contentDescription="@string/rechercher"
                 android:src="@drawable/ico_search" />
 
             <Space
@@ -55,7 +55,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ico_menu"
-                android:contentDescription="Menu"
+                android:contentDescription="@string/menu"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +158,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_setting"
-                android:contentDescription="Paramètres"
+                android:contentDescription="@string/param_tres"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 

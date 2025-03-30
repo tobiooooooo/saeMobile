@@ -29,7 +29,7 @@
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Rechercher"
+                        android:contentDescription="@string/rechercher"
                         android:src="@drawable/ico_search" />
 
                     <Space
@@ -55,7 +55,7 @@
                         android:layout_height="40dp"
                         android:layout_margin="16dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Menu"
+                        android:contentDescription="@string/menu"
                         android:src="@drawable/ico_menu"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -134,14 +134,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:text="S'inscrire" />
+                    android:text="@string/s_inscrire" />
 
                 <Button
                     android:id="@+id/button_view_accounts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:text="Voir comptes enregistrés" />
+                    android:text="@string/voir_comptes_enregistr_s" />
 
 
             </LinearLayout>
@@ -180,7 +180,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_setting"
-                        android:contentDescription="Paramètres"
+                        android:contentDescription="@string/param_tres"
                         android:background="?attr/selectableItemBackgroundBorderless"/>
 
                 </LinearLayout>

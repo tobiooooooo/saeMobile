@@ -37,7 +37,7 @@
     <string name="connexion_inscription">Sign in / Sign up</string>
     <string name="email">Email</string>
     <string name="mot_de_passe">Password</string>
-    <string name="se_connecter">Se connecter</string>
+    <string name="se_connecter">Log in</string>
     <string name="s_inscrire">Sign up</string>
     <string name="inscription">Signing up</string>
     <string name="supprimer_un_compte">Delete account</string>
@@ -48,10 +48,15 @@
     <string name="nom">Last name</string>
     <string name="pr_nom">First name</string>
     <string name="adresse_e_mail">Email adress</string>
-    
+
     <string name="drawer_accueil">Main menu</string>
     <string name="drawer_liste_assos">Our partner associations</string>
-    <string name="drawer_qrCode">Qr code</string>
-    <string name="drawer_aideFAQ">Help/FAQ</string>
+    <string name="drawer_qrCode">QR Code</string>
+    <string name="drawer_aideFAQ">Help/Q&amp;A</string>
     <string name="drawer_sinscrire">Register</string>
+    <string name="montant">Amount:</string>
+    <string name="type_de_don">Donation type:</string>
+    <string name="voir_comptes_enregistr_s">View registered accounts</string>
+    <string name="d_connexion">Log out</string>
+    <string name="confirmer_le_mot_de_passe">Confirm password</string>
 </resources>
