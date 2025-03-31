@@ -59,6 +59,16 @@
     <string name="addictions">Dépendances</string>
     <string name="cardio_donation">Associations cardiovasculaires, dons et greffes</string>
     <string name="cancer_support">Cancer et accompagnement</string>
+    <string name="textapparence">Choisissez un thème</string>
+    <string name="modeclaire">Mode clair ☀️</string>
+    <string name="modefonce">Mode sombre 🌙</string>
+    <string name="langue">Langue</string>
+    <string name="apparence">Apparence</string>
+    <string name="donne">Donnée et confidentialité</string>
+    <string name="assist">Assistance</string>
+    <string name="compte">Mon compte</string>
+    <string name="autcoll">Autorisé la collecte anonyme</string>
+    <string name="txtlong">Cette application ne collecte aucune donnée personnelle. Toutes les informations concernant vos dons restent anonymes et sont simulées à but pédagogique.</string>
 
     <string name="montant">Montant :</string>
     <string name="type_de_don">Type de don :</string>

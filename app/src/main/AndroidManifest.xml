@@ -23,10 +23,9 @@
         android:theme="@style/Theme.SAE"
         tools:targetApi="31">
         <activity
-            android:name=".activity_settings"
+            android:name=".SettingsActivity"
             android:exported="false"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/Theme.SAE" />
+             />
         <activity
             android:name=".TableauDeBordActivity"
             android:exported="false" />
@@ -51,9 +50,12 @@
         <activity
             android:name=".LoginAdmin"
             android:exported="false" />
+        <activity android:name=".DonneesConfidentialiteActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+        <activity android:name=".LangueActivity" />
+        <activity android:name=".ApparenceActivity" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
