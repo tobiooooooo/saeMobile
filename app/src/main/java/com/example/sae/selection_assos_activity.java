@@ -104,13 +104,13 @@ public class selection_assos_activity extends AppCompatActivity implements OnAss
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(selection_assos_activity.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(selection_assos_activity.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//        });
 
         spinnerCategories = findViewById(R.id.spinnerCategories);
 

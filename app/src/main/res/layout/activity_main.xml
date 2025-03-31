@@ -109,12 +109,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="20dp"
+            android:layout_width="342dp"
+            android:layout_height="198dp"
             android:layout_margin="35dp"
             android:background="@drawable/bg_login"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingVertical="20dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -125,6 +125,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="0dp"
                 android:text="@string/et_faites_un_don_pour_l_association_de_votre_choix"
                 android:textAlignment="center" />
 
@@ -132,21 +133,9 @@
                 android:id="@+id/discover_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="40dp"
                 android:text="@string/discover_btn" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/scan_association"
-                android:textAlignment="center" />
-
-            <Button
-                android:id="@+id/btn_qr_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/qr_code" />
 
         </LinearLayout>
 

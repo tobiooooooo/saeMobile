@@ -122,13 +122,13 @@ public class DonationActivity2 extends AppCompatActivity implements NavigationVi
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DonationActivity2.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(DonationActivity2.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private boolean validateInputs() {

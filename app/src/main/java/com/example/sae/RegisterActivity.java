@@ -134,13 +134,13 @@ public class RegisterActivity extends AppCompatActivity implements NavigationVie
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btnn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(RegisterActivity.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private boolean isValidEmail(String email) {

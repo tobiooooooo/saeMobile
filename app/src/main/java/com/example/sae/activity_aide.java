@@ -59,14 +59,14 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(activity_aide.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(activity_aide.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//
+//        });
         ImageButton settingsIcon = findViewById(R.id.settings_icon);
 
         settingsIcon.setOnClickListener(v -> {

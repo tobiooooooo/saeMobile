@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Button discoverBtn = (Button) findViewById(R.id.discover_btn);
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
-        Button scanQRButton = findViewById(R.id.btn_qr_code);
+
          DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
         ImageButton menuButton = findViewById(R.id.menu_button);
@@ -92,13 +92,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//        });
 
         // Redirection vers LoginActivity lorsque l'on appuie sur le bouton
         loginRedirectButton.setOnClickListener(v -> {
@@ -106,14 +106,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         });
 
-
-        scanQRButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ScanQRActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
 
