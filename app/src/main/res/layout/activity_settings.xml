@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="?android:windowBackground"
     tools:context=".SettingsActivity">
 
     <LinearLayout
@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- 🔙 Haut de page : bouton retour + logo -->
+        <!--Haut de page -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,8 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="24dp" />
 
-        <!-- 🧍 Mon compte -->
+        <!-- Mon compte -->
         <LinearLayout
+            android:id="@+id/moncompte_param"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -59,12 +60,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Mon compte"
+                android:text="@string/compte"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- 🛡 Données et confidentialité -->
+        <!-- Données et confidentialité -->
         <LinearLayout
+            android:id="@+id/donnees_param"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -76,19 +78,20 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_setting"
+                android:src="@drawable/baseline_add_moderator_24"
                 android:contentDescription="Données et confidentialité" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Données et confidentialité"
+                android:text="@string/donne"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- 🎨 Apparence -->
+        <!-- Apparence -->
         <LinearLayout
+            android:id="@+id/apparence_param"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -100,19 +103,21 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_setting"
+                android:src="@drawable/baseline_brightness_6_24"
                 android:contentDescription="Apparence" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Apparence de l'application"
+                android:text="@string/apparence"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- 🈯 Langue -->
+
+        <!--  Langue  -->
         <LinearLayout
+            android:id="@+id/langue_param"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -124,67 +129,22 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_setting"
+                android:src="@drawable/baseline_font_download_24"
                 android:contentDescription="Langue" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Langue"
+                android:text="@string/langue"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- ♿ Accessibilité -->
+
+
+        <!-- Assistance -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_setting"
-                android:contentDescription="Accessibilité" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Accessibilité"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <!-- 🔔 Notifications -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_setting"
-                android:contentDescription="Notifications" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Notifications"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <!-- 💬 Assistance -->
-        <LinearLayout
+            android:id="@+id/assistance_param"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
