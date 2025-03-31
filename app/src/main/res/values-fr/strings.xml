@@ -47,7 +47,7 @@
 
     <string name="drawer_accueil">Accueil</string>
     <string name="drawer_liste_assos">Liste de nos associations</string>
-    <string name="drawer_qrCode">Qr code</string>
+    <string name="drawer_qrCode">Scanner un qr code</string>
     <string name="drawer_aideFAQ">Aide/FAQ</string>
     <string name="drawer_sinscrire">S\'inscrire</string>
 
@@ -59,6 +59,16 @@
     <string name="addictions">Dépendances</string>
     <string name="cardio_donation">Associations cardiovasculaires, dons et greffes</string>
     <string name="cancer_support">Cancer et accompagnement</string>
+    <string name="textapparence">Choisissez un thème</string>
+    <string name="modeclaire">Mode clair ☀️</string>
+    <string name="modefonce">Mode sombre 🌙</string>
+    <string name="langue">Langue</string>
+    <string name="apparence">Apparence</string>
+    <string name="donne">Donnée et confidentialité</string>
+    <string name="assist">Assistance</string>
+    <string name="compte">Mon compte</string>
+    <string name="autcoll">Autorisé la collecte anonyme</string>
+    <string name="txtlong">Cette application ne collecte aucune donnée personnelle. Toutes les informations concernant vos dons restent anonymes et sont simulées à but pédagogique.</string>
 
     <string name="montant">Montant :</string>
     <string name="type_de_don">Type de don :</string>
@@ -74,4 +84,40 @@
     <string name="date">Date</string>
     <string name="statistiques_des_dons">Statistiques des dons</string>
     <string name="don_enregistre">Paiement validé et don enregistré !</string>
+
+    <string name="scan_qr_button_retour">Retour</string>
+    <string name="generer_qr">Generer un QR code</string>
+
+    <string name="faq_don_comment">Comment faire un don ?</string>
+    <string name="faq_don_comment_desc">Choisissez une association, puis cliquez sur \'Faire un don\' et suivez les instructions.</string>
+    <string name="faq_paiement_moyens">Quels moyens de paiement sont acceptés ?</string>
+    <string name="faq_paiement_moyens_desc">Vous pouvez payer par carte bancaire.</string>
+    <string name="faq_don_securise">Est-ce que mon don est sécurisé ?</string>
+    <string name="faq_don_securise_desc">Oui, nous utilisons un système de paiement sécurisé conforme aux normes PCI-DSS.</string>
+    <string name="faq_recu_fiscal">Puis-je obtenir un reçu fiscal ?</string>
+    <string name="faq_recu_fiscal_desc">Oui, un reçu est automatiquement généré si l\'association est habilitée à en délivrer.</string>
+    <string name="faq_compte_creation">Comment créer un compte ?</string>
+    <string name="faq_compte_creation_desc">Cliquez sur \'S\'inscrire\' depuis l\'écran d\'accueil et remplissez le formulaire.</string>
+    <string name="faq_bug_plante">L\'application plante, que faire ?</string>
+    <string name="faq_bug_plante_desc">Essayez de redémarrer l\'application ou de la réinstaller. Si le problème persiste, contactez-nous.</string>
+    <string name="faq_bug_notifications">Je ne reçois pas les notifications</string>
+    <string name="faq_bug_notifications_desc">Assurez-vous que les notifications sont activées dans les paramètres de votre téléphone.</string>
+    <string name="faq_bug_don">Un bug est survenu pendant un don</string>
+    <string name="faq_bug_don_desc">Le montant ne sera pas débité. Vous pouvez réessayer ou contacter le support si besoin.</string>
+    <string name="faq_appli_but">Quel est le but de cette application ?</string>
+    <string name="faq_appli_but_desc">Elle permet de faire des dons facilement à des associations engagées.</string>
+    <string name="faq_appli_gratuite">L\'application est-elle gratuite ?</string>
+    <string name="faq_appli_gratuite_desc">Oui, elle est 100% gratuite pour les utilisateurs.</string>
+    <string name="faq_appli_selection">Comment sont choisies les associations ?</string>
+    <string name="faq_appli_selection_desc">Elles sont sélectionnées selon leur sérieux, leur transparence et leur impact social.</string>
+    <string name="faq_access_handicap">L\'application est-elle accessible aux personnes handicapées ?</string>
+    <string name="faq_access_handicap_desc">Oui, elle est compatible avec les lecteurs d\'écran et respecte les normes d\'accessibilité WCAG.</string>
+    <string name="faq_don_handicap">Puis-je faire un don pour une cause liée au handicap ?</string>
+    <string name="faq_don_handicap_desc">Oui, plusieurs associations partenaires œuvrent pour l\'inclusion et le soutien aux personnes en situation de handicap.</string>
+    <string name="faq_cat_dons">Dons et transactions</string>
+    <string name="faq_cat_technique">Problèmes techniques</string>
+    <string name="faq_cat_appli">À propos de l\'application</string>
+    <string name="faq_cat_autre">Autres questions</string>
+
+
 </resources>

@@ -1,110 +1,97 @@
 package com.example.sae;
 
 import android.content.Intent;
-
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-
 import com.google.android.material.navigation.NavigationView;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.common.BitMatrix;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 import com.journeyapps.barcodescanner.CaptureActivity;
 
-public class ScanQRActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class ScanQRActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private String selectedAssociation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_scan_qr);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        ImageView logoImageView = findViewById(R.id.imageView); // ID du logo
+        // ✅ Affichage du nom de l'association
+        TextView assoNameTextView = findViewById(R.id.tv_asso_name);
+        selectedAssociation = getIntent().getStringExtra("association");
+        if (selectedAssociation != null) {
+            assoNameTextView.setText("Association : " + selectedAssociation);
+        }
 
+        // ✅ Lancer le scan QR
+//        Button scanQRButton = findViewById(R.id.scan_qr_button);
+//        scanQRButton.setOnClickListener(v -> startQRScanner());
+
+        Button scanQRButton = findViewById(R.id.scan_qr_button_retour);
+        scanQRButton.setOnClickListener(v -> finish());
+
+
+
+        // ✅ Retour accueil via logo
+        ImageView logoImageView = findViewById(R.id.imageView);
         logoImageView.setOnClickListener(v -> {
-            Intent intent = new Intent(ScanQRActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish(); // Ferme la page actuelle
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
         });
 
-        Button logInBtn = (Button) findViewById(R.id.log_in_btnn);
+        // ✅ Menu drawer (navigation latérale)
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        ImageButton menuButton = findViewById(R.id.menu_button);
-
-        ImageButton settingsIcon = findViewById(R.id.settings_icon);
-
-        settingsIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(ScanQRActivity.this, SettingsActivity.class);
-            startActivity(intent);
-        });
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ScanQRActivity.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-        });
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.END);
-            }
-        });
-
-
-
-
-        Button scanQRButton;
-        scanQRButton = findViewById(R.id.scan_qr_button);
-        scanQRButton.setOnClickListener(v -> startQRScanner());
-
         navigationView.setNavigationItemSelectedListener(this);
+        ImageButton menuButton = findViewById(R.id.menu_button);
+        menuButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
+
+        // ✅ Accès aux paramètres
+        ImageButton settingsIcon = findViewById(R.id.settings_icon);
+        settingsIcon.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
+
+        ImageView qrCodeImage = findViewById(R.id.qr_code_image);
+        try {
+            String content = assoNameTextView.getText().toString();
+            BitMatrix matrix = new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE, 200, 200);
+            BarcodeEncoder encoder = new BarcodeEncoder();
+            Bitmap bitmap = encoder.createBitmap(matrix);
+            qrCodeImage.setImageBitmap(bitmap);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
-
-    private void startQRScanner() {
-
-        IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setPrompt("Scannez un QR Code");
-        integrator.setBeepEnabled(true);
-        integrator.setOrientationLocked(false);
-        integrator.setCaptureActivity(CaptureActivity.class);
-        integrator.initiateScan();
-
-    }
+//    private void startQRScanner() {
+//        IntentIntegrator integrator = new IntentIntegrator(this);
+//        integrator.setPrompt("Scannez un QR Code");
+//        integrator.setBeepEnabled(true);
+//        integrator.setOrientationLocked(false);
+//        integrator.setCaptureActivity(CaptureActivity.class);
+//        integrator.initiateScan();
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null && result.getContents() != null) {
-            // Redirection après scan réussi
-            Intent intent = new Intent(this, DonationActivity.class);
-            intent.putExtra("qrData", result.getContents());
-            startActivity(intent);
+        if (!QRHelper.handleQRResult(this, requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -118,10 +105,9 @@ public class ScanQRActivity extends AppCompatActivity implements NavigationView.
         } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
-            startActivity(new Intent(this, ScanQRActivity.class));
-//            } else if (id == R.id.nav_settings) {
-//                startActivity(new Intent(this, SettingsActivity.class));
-        } else if (id == R.id.nav_aideFAQ) {
+            QRHelper.startQRScanner(this);
+        }
+        else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
         }else if (id == R.id.nav_register) {
             startActivity(new Intent(this, RegisterActivity.class));

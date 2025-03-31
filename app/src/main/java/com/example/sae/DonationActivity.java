@@ -112,14 +112,26 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
 
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
+//
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(DonationActivity.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//        });
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DonationActivity.this, LoginAdmin.class);
-                startActivity(intent);
-            }
+
+
+        Button btnScanQR = findViewById(R.id.btn_scan_qr);
+        btnScanQR.setOnClickListener(v -> {
+            Intent intent = new Intent(DonationActivity.this, ScanQRActivity.class);
+            intent.putExtra("association", association); // 🔁 on passe le nom à ScanQR
+            startActivity(intent);
         });
+
+
+
     }
 
     private boolean validateInputs() {
@@ -155,18 +167,16 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
 
         if (id == R.id.nav_home) {
             startActivity(new Intent(this, MainActivity.class));
-        }else if (id == R.id.nav_associations) {
+        } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
-            startActivity(new Intent(this, ScanQRActivity.class));
-//            } else if (id == R.id.nav_settings) {
-//                startActivity(new Intent(this, SettingsActivity.class));
-        } else if (id == R.id.nav_aideFAQ) {
+            QRHelper.startQRScanner(this);
+        }
+        else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
         }else if (id == R.id.nav_register) {
             startActivity(new Intent(this, RegisterActivity.class));
         }
-
 
         // Fermer le menu après un clic
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
@@ -174,4 +184,11 @@ public class DonationActivity extends AppCompatActivity implements NavigationVie
 
         return true;
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!QRHelper.handleQRResult(this, requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
 }

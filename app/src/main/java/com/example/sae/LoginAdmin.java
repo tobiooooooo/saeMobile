@@ -2,6 +2,7 @@ package com.example.sae;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,6 @@ import java.util.List;
 public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     EditText etEmail, etPassword;
-    Button btnLogin;
     List<AdminUser> adminUsers;
 
     @Override
@@ -42,8 +42,8 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         });
 
         Button connectButton = findViewById(R.id.button_connection);
-        EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
-        EditText pswEditText = findViewById(R.id.editTextTextPassword);
+        etEmail = findViewById(R.id.editTextTextEmailAddress);
+        etPassword = findViewById(R.id.editTextTextPassword);
 
         loadUsers();
 
@@ -51,7 +51,7 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onClick(View v) {
 
-                btnLogin.setOnClickListener(new View.OnClickListener() {
+                connectButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) { 
                         loginUser();
@@ -96,15 +96,13 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
-            startActivity(new Intent(this, ScanQRActivity.class));
-//            } else if (id == R.id.nav_settings) {
-//                startActivity(new Intent(this, SettingsActivity.class));
-        } else if (id == R.id.nav_aideFAQ) {
+            QRHelper.startQRScanner(this);
+        }
+        else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
         }else if (id == R.id.nav_register) {
             startActivity(new Intent(this, RegisterActivity.class));
         }
-
 
         // Fermer le menu après un clic
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
@@ -117,9 +115,15 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
     private void loadUsers() {
         try {
             String json = JsonReader.loadJSONFromRaw(this, R.raw.users);
+
             Gson gson = new Gson();
             AdminUserList userList = gson.fromJson(json, AdminUserList.class);
-            adminUsers = userList.getAdminUsers();
+
+            if (userList != null) {
+                adminUsers = userList.getAdminUsers();
+            } else {
+                adminUsers = null;
+            }
         } catch (JsonSyntaxException e) {
             e.printStackTrace();
             Toast.makeText(this, "Erreur de chargement des utilisateurs", Toast.LENGTH_LONG).show();
@@ -136,8 +140,8 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         }
 
         boolean isValid = false;
-        for (AdminUser user : adminUsers) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+        for (AdminUser adminUser : adminUsers) {
+            if (adminUser.getEmail().equals(email) && adminUser.getPassword().equals(password)) {
                 isValid = true;
                 break;
             }
@@ -145,8 +149,17 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
 
         if (isValid) {
             Toast.makeText(this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginAdmin.this, StatsDons.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_SHORT).show();
         }
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!QRHelper.handleQRResult(this, requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
 }

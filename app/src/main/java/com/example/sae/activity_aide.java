@@ -1,5 +1,6 @@
 package com.example.sae;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -44,7 +45,7 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
 
         expandableListView = findViewById(R.id.expListView);
 
-        prepareData();
+        prepareData(this);
 
         HelpAdapter helpAdapter = new HelpAdapter(this, listHeaders, listChildren);
         expandableListView.setAdapter(helpAdapter);
@@ -59,14 +60,14 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
 
         Button logInBtn = (Button) findViewById(R.id.log_in_btn);
 
-        logInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(activity_aide.this, LoginAdmin.class);
-                startActivity(intent);
-            }
-
-        });
+//        logInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(activity_aide.this, LoginAdmin.class);
+//                startActivity(intent);
+//            }
+//
+//        });
         ImageButton settingsIcon = findViewById(R.id.settings_icon);
 
         settingsIcon.setOnClickListener(v -> {
@@ -76,51 +77,82 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
 
     }
 
-    private void prepareData()
+    private void prepareData(Context context)
     {
         listHeaders = new ArrayList<>();
         listChildren = new HashMap<>();
 
-        listHeaders.add("Dons et transactions");
+        listHeaders.add(context.getString(R.string.faq_cat_dons));
 
         List<String[]> donsEtTransactions = new ArrayList<>();
-        donsEtTransactions.add(new String[]{"Comment faire un don ?", "Choisissez une association, puis cliquez sur 'Faire un don' et suivez les instructions."});
-        donsEtTransactions.add(new String[]{"Quels moyens de paiement sont acceptés ?", "Vous pouvez payer par carte bancaire, PayPal ou virement."});
-        donsEtTransactions.add(new String[]{"Est-ce que mon don est sécurisé ?", "Oui, nous utilisons un système de paiement sécurisé conforme aux normes PCI-DSS."});
-        donsEtTransactions.add(new String[]{"Puis-je obtenir un reçu fiscal ?", "Oui, un reçu est automatiquement généré si l'association est habilitée à en délivrer."});
+        donsEtTransactions.add(new String[]{
+                context.getString(R.string.faq_don_comment),
+                context.getString(R.string.faq_don_comment_desc)
+        });
+        donsEtTransactions.add(new String[]{
+                context.getString(R.string.faq_paiement_moyens),
+                context.getString(R.string.faq_paiement_moyens_desc)
+        });
+        donsEtTransactions.add(new String[]{
+                context.getString(R.string.faq_don_securise),
+                context.getString(R.string.faq_don_securise_desc)
+        });
+        donsEtTransactions.add(new String[]{
+                context.getString(R.string.faq_recu_fiscal),
+                context.getString(R.string.faq_recu_fiscal_desc)
+        });
 
-        listHeaders.add("Compte utilisateur");
 
-        List<String[]> compteUtilisateur = new ArrayList<>();
-        compteUtilisateur.add(new String[]{"Comment créer un compte ?", "Cliquez sur 'S'inscrire' depuis l'écran d'accueil et remplissez le formulaire."});
-        compteUtilisateur.add(new String[]{"J'ai oublié mon mot de passe, que faire ?", "Utilisez la fonction 'Mot de passe oublié' sur l'écran de connexion."});
-        compteUtilisateur.add(new String[]{"Puis-je modifier mes informations personnelles ?", "Oui, dans l'onglet 'Mon compte' vous pouvez modifier vos données."});
-
-        listHeaders.add("Problèmes techniques");
+        listHeaders.add(context.getString(R.string.faq_cat_technique));
 
         List<String[]> problemesTechniques = new ArrayList<>();
-        problemesTechniques.add(new String[]{"L'application plante, que faire ?", "Essayez de redémarrer l'application ou de la réinstaller. Si le problème persiste, contactez-nous."});
-        problemesTechniques.add(new String[]{"Je ne reçois pas les notifications", "Assurez-vous que les notifications sont activées dans les paramètres de votre téléphone."});
-        problemesTechniques.add(new String[]{"Un bug est survenu pendant un don", "Le montant ne sera pas débité. Vous pouvez réessayer ou contacter le support si besoin."});
+        problemesTechniques.add(new String[]{
+                context.getString(R.string.faq_bug_plante),
+                context.getString(R.string.faq_bug_plante_desc)
+        });
+        problemesTechniques.add(new String[]{
+                context.getString(R.string.faq_bug_notifications),
+                context.getString(R.string.faq_bug_notifications_desc)
+        });
+        problemesTechniques.add(new String[]{
+                context.getString(R.string.faq_bug_don),
+                context.getString(R.string.faq_bug_don_desc)
+        });
 
-        listHeaders.add("À propos de l’application");
+
+        listHeaders.add(context.getString(R.string.faq_cat_appli));
 
         List<String[]> aPropos = new ArrayList<>();
-        aPropos.add(new String[]{"Quel est le but de cette application ?", "Elle permet de faire des dons facilement à des associations engagées."});
-        aPropos.add(new String[]{"L’application est-elle gratuite ?", "Oui, elle est 100% gratuite pour les utilisateurs."});
-        aPropos.add(new String[]{"Comment sont choisies les associations ?", "Elles sont sélectionnées selon leur sérieux, leur transparence et leur impact social."});
+        aPropos.add(new String[]{
+                context.getString(R.string.faq_appli_but),
+                context.getString(R.string.faq_appli_but_desc)
+        });
+        aPropos.add(new String[]{
+                context.getString(R.string.faq_appli_gratuite),
+                context.getString(R.string.faq_appli_gratuite_desc)
+        });
+        aPropos.add(new String[]{
+                context.getString(R.string.faq_appli_selection),
+                context.getString(R.string.faq_appli_selection_desc)
+        });
 
-        listHeaders.add("Autre questions");
+
+        listHeaders.add(context.getString(R.string.faq_cat_autre));
 
         List<String[]> autreQuestions = new ArrayList<>();
-        autreQuestions.add(new String[]{"L'application est-elle accessible aux personnes handicapées ?", "Oui, elle est compatible avec les lecteurs d’écran et respecte les normes d’accessibilité WCAG."});
-        autreQuestions.add(new String[]{"Puis-je faire un don pour une cause liée au handicap ?", "Oui, plusieurs associations partenaires œuvrent pour l’inclusion et le soutien aux personnes en situation de handicap."});
+        autreQuestions.add(new String[]{
+                context.getString(R.string.faq_access_handicap),
+                context.getString(R.string.faq_access_handicap_desc)
+        });
+        autreQuestions.add(new String[]{
+                context.getString(R.string.faq_don_handicap),
+                context.getString(R.string.faq_don_handicap_desc)
+        });
 
         listChildren.put(listHeaders.get(0), donsEtTransactions);
-        listChildren.put(listHeaders.get(1), compteUtilisateur);
-        listChildren.put(listHeaders.get(2), problemesTechniques);
-        listChildren.put(listHeaders.get(3), aPropos);
-        listChildren.put(listHeaders.get(4), autreQuestions);
+        listChildren.put(listHeaders.get(1), problemesTechniques);
+        listChildren.put(listHeaders.get(2), aPropos);
+        listChildren.put(listHeaders.get(3), autreQuestions);
 
     }
 
@@ -133,13 +165,11 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
-            startActivity(new Intent(this, ScanQRActivity.class));
-//            } else if (id == R.id.nav_settings) {
-//                startActivity(new Intent(this, SettingsActivity.class));
-        } else if (id == R.id.nav_aideFAQ) {
-            startActivity(new Intent(this, activity_aide.class));
+            QRHelper.startQRScanner(this);
         }
-        else if (id == R.id.nav_register) {
+        else if (id == R.id.nav_aideFAQ) {
+            startActivity(new Intent(this, activity_aide.class));
+        }else if (id == R.id.nav_register) {
             startActivity(new Intent(this, RegisterActivity.class));
         }
 
@@ -148,5 +178,11 @@ public class activity_aide extends AppCompatActivity implements NavigationView.O
         drawerLayout.closeDrawer(GravityCompat.END);
 
         return true;
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!QRHelper.handleQRResult(this, requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
