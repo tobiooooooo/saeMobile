@@ -26,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:fitsSystemWindows="true"
         >
 
         <!-- ✅ Header -->
@@ -79,7 +80,6 @@
             android:text="Nom de l'association"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black"
             android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
@@ -95,21 +95,21 @@
 
 
             <ImageView
+                android:id="@+id/qr_code_image"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_gravity="center"
-                android:src="@drawable/qrcode"/>
+                />
 
             <Button
-                android:id="@+id/scan_qr_button"
+                android:id="@+id/scan_qr_button_retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/scanner_qr_code"
+                android:text="@string/scan_qr_button_retour"
                 android:layout_gravity="center"
                 android:padding="12dp"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/black"
-                android:textColor="@android:color/white"/>
+                android:backgroundTint="@color/black" />
 
 
         </LinearLayout>

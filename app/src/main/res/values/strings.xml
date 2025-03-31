@@ -52,7 +52,7 @@
 
     <string name="drawer_accueil">Main menu</string>
     <string name="drawer_liste_assos">Our partner associations</string>
-    <string name="drawer_qrCode">Qr code</string>
+    <string name="drawer_qrCode">Scanner qr code</string>
     <string name="drawer_aideFAQ">Help/FAQ</string>
     <string name="drawer_sinscrire">Register</string>
     <string name="montant">Amount:</string>
@@ -90,5 +90,7 @@
     <string name="textapparence">Choose a theme</string>
     <string name="modeclaire">Light mode ☀️ </string>
     <string name="modefonce">Dark mode 🌙 </string>
-    <string name="title_activity_settings">activity_settings</string>
+
+    <string name="scan_qr_button_retour">Back</string>
+    <string name="generer_qr">Create a QR code</string>
 </resources>

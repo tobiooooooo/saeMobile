@@ -162,10 +162,9 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.nav_associations) {
             startActivity(new Intent(this, selection_assos_activity.class));
         } else if (id == R.id.nav_qr) {
-            startActivity(new Intent(this, ScanQRActivity.class));
-//            } else if (id == R.id.nav_settings) {
-//                startActivity(new Intent(this, SettingsActivity.class));
-        } else if (id == R.id.nav_aideFAQ) {
+            QRHelper.startQRScanner(this);
+        }
+        else if (id == R.id.nav_aideFAQ) {
             startActivity(new Intent(this, activity_aide.class));
         }else if (id == R.id.nav_register) {
             startActivity(new Intent(this, RegisterActivity.class));
@@ -177,4 +176,11 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
 
         return true;
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!QRHelper.handleQRResult(this, requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
 }
