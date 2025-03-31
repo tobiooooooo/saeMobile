@@ -19,14 +19,16 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.util.List;
 
 public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    List<String> admin = List.of("greg","theo","lucas","ethan","ali-shan");
-    List<String> adminpsw = List.of("gregmdp","theomdp","lucasmdp","ethanmdp","ali-shanmdp");
-
+    EditText etEmail, etPassword;
+    Button btnLogin;
+    List<AdminUser> adminUsers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +45,20 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
         EditText pswEditText = findViewById(R.id.editTextTextPassword);
 
+        loadUsers();
+
         connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailEditText.getText().toString();
-                String psw = pswEditText.getText().toString();
-                Integer connection = 0;
-                for(int i=0;i<admin.size();i++){
-                    if(email.equals(admin.get(i))&&(psw.equals(adminpsw.get(i)))){
-                        Toast.makeText(getApplicationContext(),"connection réussi", Toast.LENGTH_LONG).show();
-                        connection=1;
+
+                btnLogin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        loginUser();
                     }
-                }
-                if (connection==0){
-                    Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
-                }
+                });
+
+                //    Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -110,5 +111,42 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         drawerLayout.closeDrawer(GravityCompat.END);
 
         return true;
+    }
+
+
+    private void loadUsers() {
+        try {
+            String json = JsonReader.loadJSONFromRaw(this, R.raw.users);
+            Gson gson = new Gson();
+            AdminUserList userList = gson.fromJson(json, AdminUserList.class);
+            adminUsers = userList.getAdminUsers();
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Erreur de chargement des utilisateurs", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void loginUser() {
+        String email = etEmail.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        boolean isValid = false;
+        for (AdminUser user : adminUsers) {
+            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+                isValid = true;
+                break;
+            }
+        }
+
+        if (isValid) {
+            Toast.makeText(this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_SHORT).show();
+        }
     }
 }
