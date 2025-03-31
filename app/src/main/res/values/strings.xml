@@ -93,4 +93,37 @@
 
     <string name="scan_qr_button_retour">Back</string>
     <string name="generer_qr">Create a QR code</string>
+
+    <string name="faq_don_comment">How to make a donation?</string>
+    <string name="faq_don_comment_desc">Choose an association, then click &quot;Donate&quot; and follow the instructions.</string>
+    <string name="faq_paiement_moyens">What payment methods are accepted?</string>
+    <string name="faq_paiement_moyens_desc">You can pay by credit card.</string>
+    <string name="faq_don_securise">Is my donation secure?</string>
+    <string name="faq_don_securise_desc">Yes, we use a secure payment system compliant with PCI-DSS standards.</string>
+    <string name="faq_recu_fiscal">Can I get a tax receipt?</string>
+    <string name="faq_recu_fiscal_desc">Yes, a receipt is automatically generated if the association is authorized to issue one.</string>
+    <string name="faq_compte_creation">How do I create an account?</string>
+    <string name="faq_compte_creation_desc">Click on &quot;Sign up&quot; from the home screen and fill in the form.</string>
+    <string name="faq_bug_plante">The app crashes, what can I do?</string>
+    <string name="faq_bug_plante_desc">Try restarting or reinstalling the app. If the issue persists, contact us.</string>
+    <string name="faq_bug_notifications">I\'m not receiving notifications</string>
+    <string name="faq_bug_notifications_desc">Make sure notifications are enabled in your phone settings.</string>
+    <string name="faq_bug_don">A bug occurred during a donation</string>
+    <string name="faq_bug_don_desc">The amount will not be charged. You can try again or contact support.</string>
+    <string name="faq_appli_but">What is the purpose of this app?</string>
+    <string name="faq_appli_but_desc">It allows easy donations to committed associations.</string>
+    <string name="faq_appli_gratuite">Is the app free?</string>
+    <string name="faq_appli_gratuite_desc">Yes, it\'s 100% free for users.</string>
+    <string name="faq_appli_selection">How are associations selected?</string>
+    <string name="faq_appli_selection_desc">They are chosen based on seriousness, transparency, and social impact.</string>
+    <string name="faq_access_handicap">Is the app accessible for people with disabilities?</string>
+    <string name="faq_access_handicap_desc">Yes, it\'s compatible with screen readers and follows WCAG standards.</string>
+    <string name="faq_don_handicap">Can I donate to a disability-related cause?</string>
+    <string name="faq_don_handicap_desc">Yes, many partner associations support people with disabilities.</string>
+    <string name="faq_cat_dons">Donations and Transactions</string>
+    <string name="faq_cat_technique">Technical Issues</string>
+    <string name="faq_cat_appli">About the App</string>
+    <string name="faq_cat_autre">Other Questions</string>
+
+
 </resources>
