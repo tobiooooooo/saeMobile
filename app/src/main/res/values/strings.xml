@@ -85,6 +85,8 @@
     <string name="donateur">Donator</string>
     <string name="date">Date</string>
     <string name="statistiques_des_dons">Donation statistics</string>
+    <string name="title_activity_settings" translatable="false">activity_settings</string>
+    <string name="don_enregistre">Successful payment. Donation registered.</string>
     <string name="textapparence">Choose a theme</string>
     <string name="modeclaire">Light mode ☀️ </string>
     <string name="modefonce">Dark mode 🌙 </string>

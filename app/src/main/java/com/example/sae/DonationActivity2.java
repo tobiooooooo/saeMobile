@@ -105,7 +105,7 @@ public class DonationActivity2 extends AppCompatActivity implements NavigationVi
                 editor.putString("dernier_don_date", dateDon);
                 editor.apply();
 
-                Toast.makeText(DonationActivity2.this, "Paiement validé et don enregistré !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DonationActivity2.this, getString(R.string.don_enregistre), Toast.LENGTH_SHORT).show();
             }
         });
 

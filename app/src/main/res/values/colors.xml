@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF0000FF</color>
     <color name="gray">#FFA5A5A5</color>
+    <color name="menthe">#FF00C7BE</color>
+    <color name="menthe_clair">#FFD0F7FE</color>
+    <color name="indigo">#FF7876F6</color>
+    <color name="indigo_clair">#FFE8E6F6</color>
+    <color name="orange">#FFEC5637</color>
+    <color name="orange_clair">#FFfCE6E7</color>
 </resources>
