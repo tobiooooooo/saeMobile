@@ -2,6 +2,7 @@ package com.example.sae;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,6 @@ import java.util.List;
 public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     EditText etEmail, etPassword;
-    Button btnLogin;
     List<AdminUser> adminUsers;
 
     @Override
@@ -42,8 +42,8 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         });
 
         Button connectButton = findViewById(R.id.button_connection);
-        EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
-        EditText pswEditText = findViewById(R.id.editTextTextPassword);
+        etEmail = findViewById(R.id.editTextTextEmailAddress);
+        etPassword = findViewById(R.id.editTextTextPassword);
 
         loadUsers();
 
@@ -51,7 +51,7 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onClick(View v) {
 
-                btnLogin.setOnClickListener(new View.OnClickListener() {
+                connectButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         loginUser();
@@ -117,9 +117,15 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
     private void loadUsers() {
         try {
             String json = JsonReader.loadJSONFromRaw(this, R.raw.users);
+
             Gson gson = new Gson();
             AdminUserList userList = gson.fromJson(json, AdminUserList.class);
-            adminUsers = userList.getAdminUsers();
+
+            if (userList != null) {
+                adminUsers = userList.getAdminUsers();
+            } else {
+                adminUsers = null;
+            }
         } catch (JsonSyntaxException e) {
             e.printStackTrace();
             Toast.makeText(this, "Erreur de chargement des utilisateurs", Toast.LENGTH_LONG).show();
@@ -136,8 +142,8 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
         }
 
         boolean isValid = false;
-        for (AdminUser user : adminUsers) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+        for (AdminUser adminUser : adminUsers) {
+            if (adminUser.getEmail().equals(email) && adminUser.getPassword().equals(password)) {
                 isValid = true;
                 break;
             }
