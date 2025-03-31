@@ -151,6 +151,8 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
 
         if (isValid) {
             Toast.makeText(this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginAdmin.this, StatsDons.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_SHORT).show();
         }
