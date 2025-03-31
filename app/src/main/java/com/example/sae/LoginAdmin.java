@@ -53,7 +53,7 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
 
                 btnLogin.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onClick(View v) { 
                         loginUser();
                     }
                 });
