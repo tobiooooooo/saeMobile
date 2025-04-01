@@ -1,7 +1,23 @@
 [
-  { "nom": "DUQUENNE E.", "montant": 7.30, "date": "30/03/25", "recurrent" : true },
-  { "nom": "REVAULT L.", "montant": 12, "date": "28/03/25", "recurrent" : false },
-  { "nom": "ROBERT T.", "montant": 15.50, "date": "27/03/25", "recurrent" : false },
-  { "nom": "KASSOU A.", "montant": 9, "date": "27/03/25", "recurrent" : false },
-  { "nom": "KUHN G.", "montant": 3.5, "date": "25/03/25", "recurrent" : true }
+  { "nom": "DUQUENNE E.", "montant": 7.5, "date": "30/03/25", "recurrent": true },
+  { "nom": "REVAULT L.", "montant": 12, "date": "28/03/25", "recurrent": false },
+  { "nom": "ROBERT T.", "montant": 15.50, "date": "27/03/25", "recurrent": false },
+  { "nom": "KASSOU A.", "montant": 9, "date": "27/03/25", "recurrent": false },
+  { "nom": "KUHN G.", "montant": 3.5, "date": "25/03/25", "recurrent": true },
+  { "nom": "SIMON J.", "montant": 14.50, "date": "20/03/25", "recurrent": false },
+  { "nom": "LEFEBVRE D.", "montant": 11.50, "date": "19/03/25", "recurrent": false },
+  { "nom": "BERTRAND N.", "montant": 4.50, "date": "18/03/25", "recurrent": true },
+  { "nom": "LAMY B.", "montant": 7.50, "date": "17/03/25", "recurrent": false },
+  { "nom": "DUPONT S.", "montant": 9.50, "date": "16/03/25", "recurrent": true },
+  { "nom": "ROUSSEL E.", "montant": 13.50, "date": "15/03/25", "recurrent": false },
+  { "nom": "VINCENT O.", "montant": 2.50, "date": "14/03/25", "recurrent": true },
+  { "nom": "GAUTHIER K.", "montant": 5.50, "date": "13/03/25", "recurrent": false },
+  { "nom": "CHEVALIER M.", "montant": 8.50, "date": "12/03/25", "recurrent": true },
+  { "nom": "COLLIN R.", "montant": 3.50, "date": "11/03/25", "recurrent": false },
+  { "nom": "FONTAINE Y.", "montant": 12.50, "date": "10/03/25", "recurrent": true },
+  { "nom": "REMY Q.", "montant": 6.50, "date": "09/03/25", "recurrent": false },
+  { "nom": "CHAUVEAU L.", "montant": 10.50, "date": "08/02/25", "recurrent": true },
+  { "nom": "BARON T.", "montant": 4.50, "date": "07/02/25", "recurrent": false },
+  { "nom": "MARCHAND V.", "montant": 7.50, "date": "06/02/25", "recurrent": true },
+  { "nom": "BLANCHARD A.", "montant": 9.50, "date": "05/01/25", "recurrent": false }
 ]
