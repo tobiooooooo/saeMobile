@@ -118,6 +118,7 @@
     <string name="faq_cat_technique">Problèmes techniques</string>
     <string name="faq_cat_appli">À propos de l\'application</string>
     <string name="faq_cat_autre">Autres questions</string>
+    <string name="log_in_as_an_admin">Se connecter en tant qu\'admin</string>
 
 
 </resources>

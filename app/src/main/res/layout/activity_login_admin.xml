@@ -57,7 +57,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
+            android:text="@string/log_in_as_an_admin"
             android:textAlignment="center"
             android:layout_marginTop="40dp"
             android:textSize="20sp"/>
@@ -105,12 +105,6 @@
                 android:text="@string/log_in"
                 android:layout_marginTop="30dp"/>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/forgot_your_password"
-                android:layout_marginTop="20dp" />
         </LinearLayout>
         <!-- ✅ Footer -->
         <Space

@@ -124,6 +124,7 @@
     <string name="faq_cat_technique">Technical Issues</string>
     <string name="faq_cat_appli">About the App</string>
     <string name="faq_cat_autre">Other Questions</string>
+    <string name="log_in_as_an_admin">Log in as an admin</string>
 
 
 </resources>

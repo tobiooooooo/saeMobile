@@ -30,7 +30,7 @@ import java.nio.charset.StandardCharsets;
 public class LoginActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private EditText etEmail, etPassword;
-    private Button btnLogin, btnSignup;
+    private Button btnLogin, btnSignup, btnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
         etPassword = findViewById(R.id.editTextTextPassword);
         btnLogin = findViewById(R.id.button_connection);
         btnSignup = findViewById(R.id.button_signup);
+        btnAdmin = findViewById(R.id.button_log_admin);
         Button btnViewAccounts = findViewById(R.id.button_view_accounts);
 
         SharedPreferences prefs = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
@@ -88,6 +89,11 @@ public class LoginActivity extends AppCompatActivity implements NavigationView.O
 
         btnSignup.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        btnAdmin.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, LoginAdmin.class);
             startActivity(intent);
         });
 

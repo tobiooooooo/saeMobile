@@ -14,8 +14,8 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:fitsSystemWindows="true"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="189dp">
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
                 <!-- ✅ Header -->
 
@@ -126,6 +126,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:text="@string/voir_comptes_enregistr_s" />
+
+                    <Button
+                        android:id="@+id/button_log_admin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_gravity="center"
+                        android:text="@string/log_in_as_an_admin" />
 
 
             </LinearLayout>

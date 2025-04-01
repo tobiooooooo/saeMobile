@@ -1,0 +1,7 @@
+[
+  { "nom": "DUQUENNE E.", "montant": 7.30, "date": "30/03/25", "recurrent" : true },
+  { "nom": "REVAULT L.", "montant": 12, "date": "28/03/25", "recurrent" : false },
+  { "nom": "ROBERT T.", "montant": 15.50, "date": "27/03/25", "recurrent" : false },
+  { "nom": "KASSOU A.", "montant": 9, "date": "27/03/25", "recurrent" : false },
+  { "nom": "KUHN G.", "montant": 3.5, "date": "25/03/25", "recurrent" : true }
+]
