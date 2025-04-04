@@ -47,18 +47,12 @@ public class LoginAdmin extends AppCompatActivity implements NavigationView.OnNa
 
         loadUsers();
 
+
+
         connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                connectButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) { 
-                        loginUser();
-                    }
-                });
-
-                //    Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
+                loginUser();
             }
         });
 
